@@ -281,6 +281,7 @@ def execute_master_audit():
     if checkpoint_path is None:
         raise FileNotFoundError("Missing required checkpoint: outputs/checkpoints/phase11_probabilistic.pt")
 
+    ckpt = torch.load(checkpoint_path, map_location=device)
     model = EHRNeuralSDE(max_step_size=0.25, use_probabilistic_decoder=True).to(device)
     model.load_state_dict(ckpt["model_state_dict"])
     model.eval()

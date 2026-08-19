@@ -1,0 +1,29 @@
+# EHR-Neural-SDE Configuration File
+
+project:
+  name: "EHR-Neural-SDE"
+  seed: 42
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  max_seq_len: 100
+  time_gap_unit: "days"
+
+model:
+  input_dim: 32
+  latent_dim: 16
+  hidden_dim: 64
+  sde_type: "ito"
+  noise_type: "diagonal"
+
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  epochs: 100
+  kl_weight: 1.0
+  device: "cuda"
+
+evaluation:
+  num_synthetic_samples: 1000
+  time_grid_resolution: 0.5

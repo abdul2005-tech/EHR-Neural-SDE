@@ -1,0 +1,7 @@
+model_label,checkpoint,plausibility_pct,wasserstein_distance,ks_statistic,correlation_error,synth_diff_std,temporal_volatility_error,lag1_autocorr,diversity_rmse,diversity_mae
+Phase 10 Baseline,best_model.pt,100.00,8.6853,0.5073,0.4492,0.0671,0.8129,0.9308,0.7678,0.4867
+11A Baseline Control,phase11_baseline.pt,100.00,8.6853,0.5073,0.4492,0.0671,0.8129,0.9308,0.7678,0.4867
+11B Temporal Difference,phase11_temporal.pt,100.00,8.6553,0.5052,0.4445,0.0673,0.8127,0.9308,0.7698,0.4883
+11C Rate Loss,phase11_rate.pt,100.00,8.3500,0.5226,0.6627,0.0608,0.8192,0.9310,0.6514,0.4044
+11F Probabilistic Decoder,phase11_probabilistic.pt,100.00,8.7899,0.5103,0.2695,0.1408,0.7391,0.9371,1.1814,0.7528
+11G Combined Model,phase11_combined.pt,100.00,8.8902,0.5359,0.5057,0.0660,0.8139,0.9317,0.6824,0.4375

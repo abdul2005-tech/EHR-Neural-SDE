@@ -1,0 +1,192 @@
+{
+  "qc_checks": {
+    "1_no_patient_leakage_across_splits": {
+      "passed": true,
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0
+    },
+    "2_no_nans_in_normalized_X": {
+      "passed": true,
+      "trajectories_with_nans": 0
+    },
+    "3_M_binary_only": {
+      "passed": true,
+      "invalid_M_trajectories": 0
+    },
+    "4_T_remains_monotonic": {
+      "passed": true,
+      "non_monotonic_trajectories": 0
+    },
+    "5_DeltaT_remains_non_negative": {
+      "passed": true,
+      "negative_delta_trajectories": 0
+    },
+    "6_T_DeltaT_unmodified": {
+      "passed": true,
+      "time_modified_trajectories": 0
+    },
+    "7_training_observed_means_approx_zero": {
+      "passed": true,
+      "observed_normalized_means": [
+        -0.0,
+        -0.0,
+        1e-06,
+        0.0,
+        0.0
+      ]
+    },
+    "8_training_observed_stds_approx_one": {
+      "passed": true,
+      "observed_normalized_stds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "9_val_test_use_train_scaler_only": {
+      "passed": true,
+      "mismatched_val_trajectories": 0
+    },
+    "10_sequence_lengths_unchanged": {
+      "passed": true,
+      "length_mismatches": 0
+    },
+    "11_no_new_timestamps_created": {
+      "passed": true,
+      "new_timestamp_trajectories": 0
+    },
+    "12_no_observations_deleted": {
+      "passed": true,
+      "deleted_observation_trajectories": 0
+    }
+  },
+  "split_statistics": {
+    "train": {
+      "num_patients": 70,
+      "num_trajectories": 98,
+      "length_N": {
+        "mean": 137.99,
+        "median": 77.0,
+        "min": 1,
+        "max": 817,
+        "std": 159.31,
+        "total_timestamps": 13523
+      },
+      "duration_hours": {
+        "mean": 84.51,
+        "median": 48.56,
+        "min": 0.57,
+        "max": 388.34
+      },
+      "missingness_pct": {
+        "heart_rate": 30.82,
+        "respiratory_rate": 30.73,
+        "spo2": 33.0,
+        "systolic_bp": 32.79,
+        "diastolic_bp": 32.79
+      },
+      "delta_t_minutes": {
+        "mean": 35.99,
+        "median": 53.0,
+        "p25": 3.0,
+        "p75": 60.0
+      }
+    },
+    "val": {
+      "num_patients": 15,
+      "num_trajectories": 25,
+      "length_N": {
+        "mean": 124.56,
+        "median": 72.0,
+        "min": 30,
+        "max": 456,
+        "std": 107.86,
+        "total_timestamps": 3114
+      },
+      "duration_hours": {
+        "mean": 86.16,
+        "median": 61.38,
+        "min": 22.75,
+        "max": 376.53
+      },
+      "missingness_pct": {
+        "heart_rate": 25.37,
+        "respiratory_rate": 25.37,
+        "spo2": 25.79,
+        "systolic_bp": 25.95,
+        "diastolic_bp": 25.95
+      },
+      "delta_t_minutes": {
+        "mean": 41.13,
+        "median": 59.0,
+        "p25": 8.0,
+        "p75": 60.0
+      }
+    },
+    "test": {
+      "num_patients": 15,
+      "num_trajectories": 17,
+      "length_N": {
+        "mean": 171.76,
+        "median": 70.0,
+        "min": 19,
+        "max": 673,
+        "std": 204.79,
+        "total_timestamps": 2920
+      },
+      "duration_hours": {
+        "mean": 113.34,
+        "median": 56.62,
+        "min": 14.69,
+        "max": 492.69
+      },
+      "missingness_pct": {
+        "heart_rate": 25.21,
+        "respiratory_rate": 25.68,
+        "spo2": 27.26,
+        "systolic_bp": 25.62,
+        "diastolic_bp": 25.62
+      },
+      "delta_t_minutes": {
+        "mean": 38.76,
+        "median": 59.0,
+        "p25": 5.0,
+        "p75": 60.0
+      }
+    }
+  },
+  "scaler": {
+    "feature_names": [
+      "heart_rate",
+      "respiratory_rate",
+      "spo2",
+      "systolic_bp",
+      "diastolic_bp"
+    ],
+    "mean": [
+      91.055371,
+      19.742635,
+      96.831034,
+      113.036638,
+      62.33106
+    ],
+    "std": [
+      18.947034,
+      5.501502,
+      3.107534,
+      21.543833,
+      13.493742
+    ],
+    "observed_counts": [
+      9355,
+      9368,
+      9061,
+      9089,
+      9089
+    ],
+    "random_seed": 42
+  }
+}

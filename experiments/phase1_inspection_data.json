@@ -1,0 +1,3130 @@
+[
+  {
+    "module": "mimic_demo",
+    "table_name": "demo_subject_id",
+    "filename": "demo_subject_id.csv",
+    "total_rows": 100,
+    "columns": [
+      "subject_id"
+    ],
+    "dtypes": {
+      "subject_id": "int64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "subject_id": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10000032
+      },
+      {
+        "subject_id": 10001217
+      },
+      {
+        "subject_id": 10001725
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "admissions",
+    "filename": "admissions.csv.gz",
+    "total_rows": 275,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "admittime",
+      "dischtime",
+      "deathtime",
+      "admission_type",
+      "admit_provider_id",
+      "admission_location",
+      "discharge_location",
+      "insurance",
+      "language",
+      "marital_status",
+      "race",
+      "edregtime",
+      "edouttime",
+      "hospital_expire_flag"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "admittime": "object",
+      "dischtime": "object",
+      "deathtime": "object",
+      "admission_type": "object",
+      "admit_provider_id": "object",
+      "admission_location": "object",
+      "discharge_location": "object",
+      "insurance": "object",
+      "language": "object",
+      "marital_status": "object",
+      "race": "object",
+      "edregtime": "object",
+      "edouttime": "object",
+      "hospital_expire_flag": "int64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 275,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "admittime",
+      "dischtime",
+      "deathtime",
+      "edregtime",
+      "edouttime"
+    ],
+    "ts_min_max": {
+      "admittime": [
+        "2110-04-11 15:08:00",
+        "2201-12-11 12:00:00"
+      ],
+      "dischtime": [
+        "2110-04-14 15:00:00",
+        "2201-12-17 13:45:00"
+      ],
+      "deathtime": [
+        "2111-11-15 17:20:00",
+        "2201-07-13 23:27:00"
+      ],
+      "edregtime": [
+        "2110-11-30 04:45:00",
+        "2201-10-30 10:48:00"
+      ],
+      "edouttime": [
+        "2110-11-30 08:03:00",
+        "2201-10-30 12:25:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "admittime": 0.0,
+      "dischtime": 0.0,
+      "deathtime": 94.55,
+      "admission_type": 0.0,
+      "admit_provider_id": 0.0,
+      "admission_location": 0.0,
+      "discharge_location": 15.27,
+      "insurance": 0.0,
+      "language": 0.0,
+      "marital_status": 4.36,
+      "race": 0.0,
+      "edregtime": 33.82,
+      "edouttime": 33.82,
+      "hospital_expire_flag": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10004235,
+        "hadm_id": 24181354,
+        "admittime": "2196-02-24 14:38:00",
+        "dischtime": "2196-03-04 14:02:00",
+        "deathtime": null,
+        "admission_type": "URGENT",
+        "admit_provider_id": "P03YMR",
+        "admission_location": "TRANSFER FROM HOSPITAL",
+        "discharge_location": "SKILLED NURSING FACILITY",
+        "insurance": "Medicaid",
+        "language": "ENGLISH",
+        "marital_status": "SINGLE",
+        "race": "BLACK/CAPE VERDEAN",
+        "edregtime": "2196-02-24 12:15:00",
+        "edouttime": "2196-02-24 17:07:00",
+        "hospital_expire_flag": 0
+      },
+      {
+        "subject_id": 10009628,
+        "hadm_id": 25926192,
+        "admittime": "2153-09-17 17:08:00",
+        "dischtime": "2153-09-25 13:20:00",
+        "deathtime": null,
+        "admission_type": "URGENT",
+        "admit_provider_id": "P41R5N",
+        "admission_location": "TRANSFER FROM HOSPITAL",
+        "discharge_location": "HOME HEALTH CARE",
+        "insurance": "Medicaid",
+        "language": "?",
+        "marital_status": "MARRIED",
+        "race": "HISPANIC/LATINO - PUERTO RICAN",
+        "edregtime": null,
+        "edouttime": null,
+        "hospital_expire_flag": 0
+      },
+      {
+        "subject_id": 10018081,
+        "hadm_id": 23983182,
+        "admittime": "2134-08-18 02:02:00",
+        "dischtime": "2134-08-23 19:35:00",
+        "deathtime": null,
+        "admission_type": "URGENT",
+        "admit_provider_id": "P233F6",
+        "admission_location": "TRANSFER FROM HOSPITAL",
+        "discharge_location": "SKILLED NURSING FACILITY",
+        "insurance": "Medicare",
+        "language": "ENGLISH",
+        "marital_status": "MARRIED",
+        "race": "WHITE",
+        "edregtime": "2134-08-17 16:24:00",
+        "edouttime": "2134-08-18 03:15:00",
+        "hospital_expire_flag": 0
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "d_hcpcs",
+    "filename": "d_hcpcs.csv.gz",
+    "total_rows": 89200,
+    "columns": [
+      "code",
+      "category",
+      "long_description",
+      "short_description"
+    ],
+    "dtypes": {
+      "code": "object",
+      "category": "float64",
+      "long_description": "object",
+      "short_description": "object"
+    },
+    "unique_subjects": 0,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "code": 0.0,
+      "category": 7.67,
+      "long_description": 92.38,
+      "short_description": 0.0
+    },
+    "sample": [
+      {
+        "code": "TD   ",
+        "category": null,
+        "long_description": "Rn",
+        "short_description": "Rn"
+      },
+      {
+        "code": "A0428",
+        "category": null,
+        "long_description": "Ambulance service, basic life support, non-emergency transport, (bls)",
+        "short_description": "Bls"
+      },
+      {
+        "code": "V5272",
+        "category": null,
+        "long_description": "Assistive listening device, tdd",
+        "short_description": "Tdd"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "d_icd_diagnoses",
+    "filename": "d_icd_diagnoses.csv.gz",
+    "total_rows": 109775,
+    "columns": [
+      "icd_code",
+      "icd_version",
+      "long_title"
+    ],
+    "dtypes": {
+      "icd_code": "int64",
+      "icd_version": "int64",
+      "long_title": "object"
+    },
+    "unique_subjects": 0,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "icd_code": 0.0,
+      "icd_version": 0.0,
+      "long_title": 0.0
+    },
+    "sample": [
+      {
+        "icd_code": 90,
+        "icd_version": 9,
+        "long_title": "Infectious colitis, enteritis, and gastroenteritis"
+      },
+      {
+        "icd_code": 1160,
+        "icd_version": 9,
+        "long_title": "Tuberculous pneumonia [any form], unspecified"
+      },
+      {
+        "icd_code": 1186,
+        "icd_version": 9,
+        "long_title": "Other specified pulmonary tuberculosis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "d_icd_procedures",
+    "filename": "d_icd_procedures.csv.gz",
+    "total_rows": 85257,
+    "columns": [
+      "icd_code",
+      "icd_version",
+      "long_title"
+    ],
+    "dtypes": {
+      "icd_code": "int64",
+      "icd_version": "int64",
+      "long_title": "object"
+    },
+    "unique_subjects": 0,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "icd_code": 0.0,
+      "icd_version": 0.0,
+      "long_title": 0.0
+    },
+    "sample": [
+      {
+        "icd_code": 39,
+        "icd_version": 9,
+        "long_title": "Other computer assisted surgery"
+      },
+      {
+        "icd_code": 48,
+        "icd_version": 9,
+        "long_title": "Insertion of four or more vascular stents"
+      },
+      {
+        "icd_code": 74,
+        "icd_version": 9,
+        "long_title": "Hip bearing surface, metal-on-polyethylene"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "d_labitems",
+    "filename": "d_labitems.csv.gz",
+    "total_rows": 1622,
+    "columns": [
+      "itemid",
+      "label",
+      "fluid",
+      "category"
+    ],
+    "dtypes": {
+      "itemid": "int64",
+      "label": "object",
+      "fluid": "object",
+      "category": "object"
+    },
+    "unique_subjects": 0,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "itemid": 0.0,
+      "label": 0.18,
+      "fluid": 0.0,
+      "category": 0.0
+    },
+    "sample": [
+      {
+        "itemid": 50808,
+        "label": "Free Calcium",
+        "fluid": "Blood",
+        "category": "Blood Gas"
+      },
+      {
+        "itemid": 50826,
+        "label": "Tidal Volume",
+        "fluid": "Blood",
+        "category": "Blood Gas"
+      },
+      {
+        "itemid": 50813,
+        "label": "Lactate",
+        "fluid": "Blood",
+        "category": "Blood Gas"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "diagnoses_icd",
+    "filename": "diagnoses_icd.csv.gz",
+    "total_rows": 4506,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "seq_num",
+      "icd_code",
+      "icd_version"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "seq_num": "int64",
+      "icd_code": "object",
+      "icd_version": "int64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 275,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "seq_num": 0.0,
+      "icd_code": 0.0,
+      "icd_version": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10035185,
+        "hadm_id": 22580999,
+        "seq_num": 3,
+        "icd_code": "4139",
+        "icd_version": 9
+      },
+      {
+        "subject_id": 10035185,
+        "hadm_id": 22580999,
+        "seq_num": 10,
+        "icd_code": "V707",
+        "icd_version": 9
+      },
+      {
+        "subject_id": 10035185,
+        "hadm_id": 22580999,
+        "seq_num": 1,
+        "icd_code": "41401",
+        "icd_version": 9
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "drgcodes",
+    "filename": "drgcodes.csv.gz",
+    "total_rows": 454,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "drg_type",
+      "drg_code",
+      "description",
+      "drg_severity",
+      "drg_mortality"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "drg_type": "object",
+      "drg_code": "int64",
+      "description": "object",
+      "drg_severity": "float64",
+      "drg_mortality": "float64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 233,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "drg_type": 0.0,
+      "drg_code": 0.0,
+      "description": 0.0,
+      "drg_severity": 51.32,
+      "drg_mortality": 51.32
+    },
+    "sample": [
+      {
+        "subject_id": 10004235,
+        "hadm_id": 22187210,
+        "drg_type": "HCFA",
+        "drg_code": 864,
+        "description": "FEVER",
+        "drg_severity": null,
+        "drg_mortality": null
+      },
+      {
+        "subject_id": 10026255,
+        "hadm_id": 22059910,
+        "drg_type": "HCFA",
+        "drg_code": 180,
+        "description": "RESPIRATORY NEOPLASMS W MCC",
+        "drg_severity": null,
+        "drg_mortality": null
+      },
+      {
+        "subject_id": 10032725,
+        "hadm_id": 20611640,
+        "drg_type": "HCFA",
+        "drg_code": 54,
+        "description": "NERVOUS SYSTEM NEOPLASMS W MCC",
+        "drg_severity": null,
+        "drg_mortality": null
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "emar",
+    "filename": "emar.csv.gz",
+    "total_rows": 35835,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "emar_id",
+      "emar_seq",
+      "poe_id",
+      "pharmacy_id",
+      "enter_provider_id",
+      "charttime",
+      "medication",
+      "event_txt",
+      "scheduletime",
+      "storetime"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "emar_id": "object",
+      "emar_seq": "int64",
+      "poe_id": "object",
+      "pharmacy_id": "float64",
+      "enter_provider_id": "object",
+      "charttime": "object",
+      "medication": "object",
+      "event_txt": "float64",
+      "scheduletime": "object",
+      "storetime": "object"
+    },
+    "unique_subjects": 65,
+    "unique_hadms": 181,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "charttime",
+      "scheduletime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "charttime": [
+        "2113-07-17 15:30:00",
+        "2201-12-17 08:12:00"
+      ],
+      "scheduletime": [
+        "2075-03-02 00:00:00",
+        "2201-12-17 08:12:00"
+      ],
+      "storetime": [
+        "2113-07-17 15:30:00",
+        "2201-12-17 08:17:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 2.81,
+      "emar_id": 0.0,
+      "emar_seq": 0.0,
+      "poe_id": 0.0,
+      "pharmacy_id": 18.04,
+      "enter_provider_id": 91.8,
+      "charttime": 0.0,
+      "medication": 4.4,
+      "event_txt": 0.87,
+      "scheduletime": 0.04,
+      "storetime": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10005909,
+        "hadm_id": 20199380,
+        "emar_id": "10005909-74",
+        "emar_seq": 74,
+        "poe_id": "10005909-97",
+        "pharmacy_id": 96110427.0,
+        "enter_provider_id": null,
+        "charttime": "2144-10-31 05:56:00",
+        "medication": "Magnesium Sulfate",
+        "event_txt": null,
+        "scheduletime": "2144-10-31 05:56:00",
+        "storetime": "2144-10-31 05:56:00"
+      },
+      {
+        "subject_id": 10005909,
+        "hadm_id": 20199380,
+        "emar_id": "10005909-79",
+        "emar_seq": 79,
+        "poe_id": "10005909-97",
+        "pharmacy_id": 96110427.0,
+        "enter_provider_id": null,
+        "charttime": "2144-10-31 08:00:00",
+        "medication": "Magnesium Sulfate",
+        "event_txt": null,
+        "scheduletime": "2144-10-31 08:00:00",
+        "storetime": "2144-10-31 08:15:00"
+      },
+      {
+        "subject_id": 10008287,
+        "hadm_id": 22168393,
+        "emar_id": "10008287-32",
+        "emar_seq": 32,
+        "poe_id": "10008287-58",
+        "pharmacy_id": null,
+        "enter_provider_id": "P26PKF",
+        "charttime": "2145-09-28 20:15:00",
+        "medication": "Potassium Chloride Replacement (Critical Care and Oncology)",
+        "event_txt": null,
+        "scheduletime": "2145-09-28 20:15:00",
+        "storetime": "2145-09-28 20:38:00"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "emar_detail",
+    "filename": "emar_detail.csv.gz",
+    "total_rows": 72018,
+    "columns": [
+      "subject_id",
+      "emar_id",
+      "emar_seq",
+      "parent_field_ordinal",
+      "administration_type",
+      "pharmacy_id",
+      "barcode_type",
+      "reason_for_no_barcode",
+      "complete_dose_not_given",
+      "dose_due",
+      "dose_due_unit",
+      "dose_given",
+      "dose_given_unit",
+      "will_remainder_of_dose_be_given",
+      "product_amount_given",
+      "product_unit",
+      "product_code",
+      "product_description",
+      "product_description_other",
+      "prior_infusion_rate",
+      "infusion_rate",
+      "infusion_rate_adjustment",
+      "infusion_rate_adjustment_amount",
+      "infusion_rate_unit",
+      "route",
+      "infusion_complete",
+      "completion_interval",
+      "new_iv_bag_hung",
+      "continued_infusion_in_other_location",
+      "restart_interval",
+      "side",
+      "site",
+      "non_formulary_visual_verification"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "emar_id": "object",
+      "emar_seq": "int64",
+      "parent_field_ordinal": "float64",
+      "administration_type": "object",
+      "pharmacy_id": "float64",
+      "barcode_type": "float64",
+      "reason_for_no_barcode": "float64",
+      "complete_dose_not_given": "float64",
+      "dose_due": "float64",
+      "dose_due_unit": "object",
+      "dose_given": "object",
+      "dose_given_unit": "object",
+      "will_remainder_of_dose_be_given": "float64",
+      "product_amount_given": "float64",
+      "product_unit": "float64",
+      "product_code": "float64",
+      "product_description": "float64",
+      "product_description_other": "float64",
+      "prior_infusion_rate": "float64",
+      "infusion_rate": "float64",
+      "infusion_rate_adjustment": "object",
+      "infusion_rate_adjustment_amount": "float64",
+      "infusion_rate_unit": "object",
+      "route": "float64",
+      "infusion_complete": "object",
+      "completion_interval": "float64",
+      "new_iv_bag_hung": "float64",
+      "continued_infusion_in_other_location": "float64",
+      "restart_interval": "object",
+      "side": "float64",
+      "site": "float64",
+      "non_formulary_visual_verification": "float64"
+    },
+    "unique_subjects": 65,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "subject_id": 0.0,
+      "emar_id": 0.0,
+      "emar_seq": 0.0,
+      "parent_field_ordinal": 49.76,
+      "administration_type": 50.25,
+      "pharmacy_id": 51.7,
+      "barcode_type": 51.76,
+      "reason_for_no_barcode": 98.05,
+      "complete_dose_not_given": 79.49,
+      "dose_due": 53.04,
+      "dose_due_unit": 50.91,
+      "dose_given": 54.66,
+      "dose_given_unit": 53.52,
+      "will_remainder_of_dose_be_given": 74.1,
+      "product_amount_given": 57.8,
+      "product_unit": 56.64,
+      "product_code": 52.45,
+      "product_description": 59.96,
+      "product_description_other": 95.73,
+      "prior_infusion_rate": 98.0,
+      "infusion_rate": 97.49,
+      "infusion_rate_adjustment": 96.13,
+      "infusion_rate_adjustment_amount": 99.89,
+      "infusion_rate_unit": 95.95,
+      "route": 85.27,
+      "infusion_complete": 99.46,
+      "completion_interval": 99.52,
+      "new_iv_bag_hung": 99.36,
+      "continued_infusion_in_other_location": 99.98,
+      "restart_interval": 99.82,
+      "side": 99.75,
+      "site": 99.75,
+      "non_formulary_visual_verification": 99.85
+    },
+    "sample": [
+      {
+        "subject_id": 10039708,
+        "emar_id": "10039708-1750",
+        "emar_seq": 1750,
+        "parent_field_ordinal": 1.1,
+        "administration_type": null,
+        "pharmacy_id": 80400800.0,
+        "barcode_type": null,
+        "reason_for_no_barcode": null,
+        "complete_dose_not_given": null,
+        "dose_due": null,
+        "dose_due_unit": null,
+        "dose_given": "0.25",
+        "dose_given_unit": "mg",
+        "will_remainder_of_dose_be_given": null,
+        "product_amount_given": null,
+        "product_unit": null,
+        "product_code": null,
+        "product_description": null,
+        "product_description_other": null,
+        "prior_infusion_rate": null,
+        "infusion_rate": null,
+        "infusion_rate_adjustment": null,
+        "infusion_rate_adjustment_amount": null,
+        "infusion_rate_unit": null,
+        "route": null,
+        "infusion_complete": null,
+        "completion_interval": null,
+        "new_iv_bag_hung": null,
+        "continued_infusion_in_other_location": null,
+        "restart_interval": null,
+        "side": null,
+        "site": null,
+        "non_formulary_visual_verification": null
+      },
+      {
+        "subject_id": 10015860,
+        "emar_id": "10015860-565",
+        "emar_seq": 565,
+        "parent_field_ordinal": 1.1,
+        "administration_type": null,
+        "pharmacy_id": 98178739.0,
+        "barcode_type": null,
+        "reason_for_no_barcode": null,
+        "complete_dose_not_given": null,
+        "dose_due": null,
+        "dose_due_unit": null,
+        "dose_given": "___",
+        "dose_given_unit": null,
+        "will_remainder_of_dose_be_given": null,
+        "product_amount_given": null,
+        "product_unit": null,
+        "product_code": null,
+        "product_description": null,
+        "product_description_other": null,
+        "prior_infusion_rate": null,
+        "infusion_rate": null,
+        "infusion_rate_adjustment": null,
+        "infusion_rate_adjustment_amount": null,
+        "infusion_rate_unit": null,
+        "route": null,
+        "infusion_complete": null,
+        "completion_interval": null,
+        "new_iv_bag_hung": null,
+        "continued_infusion_in_other_location": null,
+        "restart_interval": null,
+        "side": null,
+        "site": null,
+        "non_formulary_visual_verification": null
+      },
+      {
+        "subject_id": 10005866,
+        "emar_id": "10005866-571",
+        "emar_seq": 571,
+        "parent_field_ordinal": 1.1,
+        "administration_type": null,
+        "pharmacy_id": null,
+        "barcode_type": null,
+        "reason_for_no_barcode": null,
+        "complete_dose_not_given": null,
+        "dose_due": null,
+        "dose_due_unit": null,
+        "dose_given": null,
+        "dose_given_unit": "mL/hr",
+        "will_remainder_of_dose_be_given": null,
+        "product_amount_given": null,
+        "product_unit": null,
+        "product_code": null,
+        "product_description": null,
+        "product_description_other": null,
+        "prior_infusion_rate": null,
+        "infusion_rate": null,
+        "infusion_rate_adjustment": null,
+        "infusion_rate_adjustment_amount": null,
+        "infusion_rate_unit": null,
+        "route": null,
+        "infusion_complete": null,
+        "completion_interval": null,
+        "new_iv_bag_hung": null,
+        "continued_infusion_in_other_location": null,
+        "restart_interval": null,
+        "side": null,
+        "site": null,
+        "non_formulary_visual_verification": null
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "hcpcsevents",
+    "filename": "hcpcsevents.csv.gz",
+    "total_rows": 61,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "chartdate",
+      "hcpcs_cd",
+      "seq_num",
+      "short_description"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "chartdate": "object",
+      "hcpcs_cd": "int64",
+      "seq_num": "int64",
+      "short_description": "object"
+    },
+    "unique_subjects": 18,
+    "unique_hadms": 41,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "chartdate"
+    ],
+    "ts_min_max": {
+      "chartdate": [
+        "2113-07-17 00:00:00",
+        "2201-03-23 00:00:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "chartdate": 0.0,
+      "hcpcs_cd": 0.0,
+      "seq_num": 0.0,
+      "short_description": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10005348,
+        "hadm_id": 29176490,
+        "chartdate": "2129-05-22",
+        "hcpcs_cd": 93454,
+        "seq_num": 1,
+        "short_description": "Cardiovascular"
+      },
+      {
+        "subject_id": 10005348,
+        "hadm_id": 29176490,
+        "chartdate": "2129-05-22",
+        "hcpcs_cd": 92921,
+        "seq_num": 2,
+        "short_description": "Cardiovascular"
+      },
+      {
+        "subject_id": 10004457,
+        "hadm_id": 21039249,
+        "chartdate": "2140-09-17",
+        "hcpcs_cd": 92980,
+        "seq_num": 1,
+        "short_description": "Cardiovascular"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "labevents",
+    "filename": "labevents.csv.gz",
+    "total_rows": 107727,
+    "columns": [
+      "labevent_id",
+      "subject_id",
+      "hadm_id",
+      "specimen_id",
+      "itemid",
+      "order_provider_id",
+      "charttime",
+      "storetime",
+      "value",
+      "valuenum",
+      "valueuom",
+      "ref_range_lower",
+      "ref_range_upper",
+      "flag",
+      "priority",
+      "comments"
+    ],
+    "dtypes": {
+      "labevent_id": "int64",
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "specimen_id": "int64",
+      "itemid": "int64",
+      "order_provider_id": "float64",
+      "charttime": "object",
+      "storetime": "object",
+      "value": "float64",
+      "valuenum": "float64",
+      "valueuom": "object",
+      "ref_range_lower": "float64",
+      "ref_range_upper": "float64",
+      "flag": "object",
+      "priority": "object",
+      "comments": "float64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 252,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "charttime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "charttime": [
+        "2110-04-08 11:11:00",
+        "2202-08-26 14:00:00"
+      ],
+      "storetime": [
+        "2110-04-08 17:49:00",
+        "2202-08-26 14:13:00"
+      ]
+    },
+    "null_pcts": {
+      "labevent_id": 0.0,
+      "subject_id": 0.0,
+      "hadm_id": 26.38,
+      "specimen_id": 0.0,
+      "itemid": 0.0,
+      "order_provider_id": 84.38,
+      "charttime": 0.0,
+      "storetime": 0.92,
+      "value": 8.9,
+      "valuenum": 11.59,
+      "valueuom": 15.04,
+      "ref_range_lower": 17.38,
+      "ref_range_upper": 17.38,
+      "flag": 62.61,
+      "priority": 8.66,
+      "comments": 82.87
+    },
+    "sample": [
+      {
+        "labevent_id": 172061,
+        "subject_id": 10014354,
+        "hadm_id": 29600294,
+        "specimen_id": 1808066,
+        "itemid": 51277,
+        "order_provider_id": null,
+        "charttime": "2148-08-16 00:00:00",
+        "storetime": "2148-08-16 01:30:00",
+        "value": 15.4,
+        "valuenum": 15.4,
+        "valueuom": "%",
+        "ref_range_lower": 10.5,
+        "ref_range_upper": 15.5,
+        "flag": null,
+        "priority": "ROUTINE",
+        "comments": null
+      },
+      {
+        "labevent_id": 172062,
+        "subject_id": 10014354,
+        "hadm_id": 29600294,
+        "specimen_id": 1808066,
+        "itemid": 51279,
+        "order_provider_id": null,
+        "charttime": "2148-08-16 00:00:00",
+        "storetime": "2148-08-16 01:30:00",
+        "value": 3.35,
+        "valuenum": 3.35,
+        "valueuom": "m/uL",
+        "ref_range_lower": 4.6,
+        "ref_range_upper": 6.1,
+        "flag": "abnormal",
+        "priority": "ROUTINE",
+        "comments": null
+      },
+      {
+        "labevent_id": 172068,
+        "subject_id": 10014354,
+        "hadm_id": 29600294,
+        "specimen_id": 1808066,
+        "itemid": 52172,
+        "order_provider_id": null,
+        "charttime": "2148-08-16 00:00:00",
+        "storetime": "2148-08-16 01:30:00",
+        "value": 49.7,
+        "valuenum": 49.7,
+        "valueuom": "fL",
+        "ref_range_lower": 35.1,
+        "ref_range_upper": 46.3,
+        "flag": "abnormal",
+        "priority": "ROUTINE",
+        "comments": null
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "microbiologyevents",
+    "filename": "microbiologyevents.csv.gz",
+    "total_rows": 2899,
+    "columns": [
+      "microevent_id",
+      "subject_id",
+      "hadm_id",
+      "micro_specimen_id",
+      "order_provider_id",
+      "chartdate",
+      "charttime",
+      "spec_itemid",
+      "spec_type_desc",
+      "test_seq",
+      "storedate",
+      "storetime",
+      "test_itemid",
+      "test_name",
+      "org_itemid",
+      "org_name",
+      "isolate_num",
+      "quantity",
+      "ab_itemid",
+      "ab_name",
+      "dilution_text",
+      "dilution_comparison",
+      "dilution_value",
+      "interpretation",
+      "comments"
+    ],
+    "dtypes": {
+      "microevent_id": "int64",
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "micro_specimen_id": "int64",
+      "order_provider_id": "float64",
+      "chartdate": "object",
+      "charttime": "object",
+      "spec_itemid": "int64",
+      "spec_type_desc": "object",
+      "test_seq": "int64",
+      "storedate": "object",
+      "storetime": "object",
+      "test_itemid": "int64",
+      "test_name": "object",
+      "org_itemid": "float64",
+      "org_name": "object",
+      "isolate_num": "float64",
+      "quantity": "float64",
+      "ab_itemid": "float64",
+      "ab_name": "object",
+      "dilution_text": "object",
+      "dilution_comparison": "float64",
+      "dilution_value": "float64",
+      "interpretation": "object",
+      "comments": "object"
+    },
+    "unique_subjects": 97,
+    "unique_hadms": 171,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "chartdate",
+      "charttime",
+      "storedate",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "chartdate": [
+        "2110-01-04 00:00:00",
+        "2202-01-10 00:00:00"
+      ],
+      "charttime": [
+        "2110-01-04 14:33:00",
+        "2201-11-16 13:04:00"
+      ],
+      "storedate": [
+        "2110-01-05 00:00:00",
+        "2202-03-17 00:00:00"
+      ],
+      "storetime": [
+        "2110-01-05 07:43:00",
+        "2202-03-17 13:47:00"
+      ]
+    },
+    "null_pcts": {
+      "microevent_id": 0.0,
+      "subject_id": 0.0,
+      "hadm_id": 33.49,
+      "micro_specimen_id": 0.0,
+      "order_provider_id": 89.55,
+      "chartdate": 0.0,
+      "charttime": 6.31,
+      "spec_itemid": 0.0,
+      "spec_type_desc": 0.0,
+      "test_seq": 0.0,
+      "storedate": 0.55,
+      "storetime": 0.55,
+      "test_itemid": 0.0,
+      "test_name": 0.0,
+      "org_itemid": 56.61,
+      "org_name": 56.61,
+      "isolate_num": 56.61,
+      "quantity": 100.0,
+      "ab_itemid": 64.26,
+      "ab_name": 64.26,
+      "dilution_text": 65.54,
+      "dilution_comparison": 65.57,
+      "dilution_value": 65.57,
+      "interpretation": 64.26,
+      "comments": 27.98
+    },
+    "sample": [
+      {
+        "microevent_id": 36,
+        "subject_id": 10000032,
+        "hadm_id": 25742920,
+        "micro_specimen_id": 7814634,
+        "order_provider_id": null,
+        "chartdate": "2180-08-06 00:00:00",
+        "charttime": "2180-08-06 20:35:00",
+        "spec_itemid": 70070,
+        "spec_type_desc": "SWAB",
+        "test_seq": 1,
+        "storedate": "2180-08-08 00:00:00",
+        "storetime": "2180-08-08 08:03:00",
+        "test_itemid": 90115,
+        "test_name": "R/O VANCOMYCIN RESISTANT ENTEROCOCCUS",
+        "org_itemid": null,
+        "org_name": null,
+        "isolate_num": null,
+        "quantity": null,
+        "ab_itemid": null,
+        "ab_name": null,
+        "dilution_text": null,
+        "dilution_comparison": null,
+        "dilution_value": null,
+        "interpretation": null,
+        "comments": "No VRE isolated.  "
+      },
+      {
+        "microevent_id": 15,
+        "subject_id": 10000032,
+        "hadm_id": 22595853,
+        "micro_specimen_id": 5717063,
+        "order_provider_id": null,
+        "chartdate": "2180-05-07 00:00:00",
+        "charttime": "2180-05-07 00:19:00",
+        "spec_itemid": 70070,
+        "spec_type_desc": "SWAB",
+        "test_seq": 1,
+        "storedate": "2180-05-09 00:00:00",
+        "storetime": "2180-05-09 07:57:00",
+        "test_itemid": 90115,
+        "test_name": "R/O VANCOMYCIN RESISTANT ENTEROCOCCUS",
+        "org_itemid": null,
+        "org_name": null,
+        "isolate_num": null,
+        "quantity": null,
+        "ab_itemid": null,
+        "ab_name": null,
+        "dilution_text": null,
+        "dilution_comparison": null,
+        "dilution_value": null,
+        "interpretation": null,
+        "comments": "No VRE isolated.  "
+      },
+      {
+        "microevent_id": 32,
+        "subject_id": 10000032,
+        "hadm_id": 29079034,
+        "micro_specimen_id": 5901894,
+        "order_provider_id": null,
+        "chartdate": "2180-07-24 00:00:00",
+        "charttime": "2180-07-24 00:55:00",
+        "spec_itemid": 70070,
+        "spec_type_desc": "SWAB",
+        "test_seq": 1,
+        "storedate": "2180-07-27 00:00:00",
+        "storetime": "2180-07-27 11:15:00",
+        "test_itemid": 90115,
+        "test_name": "R/O VANCOMYCIN RESISTANT ENTEROCOCCUS",
+        "org_itemid": null,
+        "org_name": null,
+        "isolate_num": null,
+        "quantity": null,
+        "ab_itemid": null,
+        "ab_name": null,
+        "dilution_text": null,
+        "dilution_comparison": null,
+        "dilution_value": null,
+        "interpretation": null,
+        "comments": "No VRE isolated.  "
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "omr",
+    "filename": "omr.csv.gz",
+    "total_rows": 2964,
+    "columns": [
+      "subject_id",
+      "chartdate",
+      "seq_num",
+      "result_name",
+      "result_value"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "chartdate": "object",
+      "seq_num": "int64",
+      "result_name": "object",
+      "result_value": "float64"
+    },
+    "unique_subjects": 79,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "chartdate"
+    ],
+    "ts_min_max": {
+      "chartdate": [
+        "2109-10-15 00:00:00",
+        "2202-12-17 00:00:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "chartdate": 0.0,
+      "seq_num": 0.0,
+      "result_name": 0.0,
+      "result_value": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10011398,
+        "chartdate": "2146-12-01",
+        "seq_num": 1,
+        "result_name": "Height (Inches)",
+        "result_value": 63.0
+      },
+      {
+        "subject_id": 10011398,
+        "chartdate": "2147-01-22",
+        "seq_num": 1,
+        "result_name": "Weight (Lbs)",
+        "result_value": 127.0
+      },
+      {
+        "subject_id": 10011398,
+        "chartdate": "2146-12-01",
+        "seq_num": 1,
+        "result_name": "Weight (Lbs)",
+        "result_value": 135.0
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "patients",
+    "filename": "patients.csv.gz",
+    "total_rows": 100,
+    "columns": [
+      "subject_id",
+      "gender",
+      "anchor_age",
+      "anchor_year",
+      "anchor_year_group",
+      "dod"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "gender": "object",
+      "anchor_age": "int64",
+      "anchor_year": "int64",
+      "anchor_year_group": "object",
+      "dod": "object"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "dod"
+    ],
+    "ts_min_max": {
+      "dod": [
+        "2111-11-15 00:00:00",
+        "2201-12-24 00:00:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "gender": 0.0,
+      "anchor_age": 0.0,
+      "anchor_year": 0.0,
+      "anchor_year_group": 0.0,
+      "dod": 69.0
+    },
+    "sample": [
+      {
+        "subject_id": 10014729,
+        "gender": "F",
+        "anchor_age": 21,
+        "anchor_year": 2125,
+        "anchor_year_group": "2011 - 2013",
+        "dod": null
+      },
+      {
+        "subject_id": 10003400,
+        "gender": "F",
+        "anchor_age": 72,
+        "anchor_year": 2134,
+        "anchor_year_group": "2011 - 2013",
+        "dod": "2137-09-02"
+      },
+      {
+        "subject_id": 10002428,
+        "gender": "F",
+        "anchor_age": 80,
+        "anchor_year": 2155,
+        "anchor_year_group": "2011 - 2013",
+        "dod": null
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "pharmacy",
+    "filename": "pharmacy.csv.gz",
+    "total_rows": 15306,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "pharmacy_id",
+      "poe_id",
+      "starttime",
+      "stoptime",
+      "medication",
+      "proc_type",
+      "status",
+      "entertime",
+      "verifiedtime",
+      "route",
+      "frequency",
+      "disp_sched",
+      "infusion_type",
+      "sliding_scale",
+      "lockout_interval",
+      "basal_rate",
+      "one_hr_max",
+      "doses_per_24_hrs",
+      "duration",
+      "duration_interval",
+      "expiration_value",
+      "expiration_unit",
+      "expirationdate",
+      "dispensation",
+      "fill_quantity"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "pharmacy_id": "int64",
+      "poe_id": "object",
+      "starttime": "object",
+      "stoptime": "object",
+      "medication": "object",
+      "proc_type": "object",
+      "status": "object",
+      "entertime": "object",
+      "verifiedtime": "object",
+      "route": "float64",
+      "frequency": "float64",
+      "disp_sched": "float64",
+      "infusion_type": "float64",
+      "sliding_scale": "float64",
+      "lockout_interval": "float64",
+      "basal_rate": "float64",
+      "one_hr_max": "float64",
+      "doses_per_24_hrs": "float64",
+      "duration": "float64",
+      "duration_interval": "float64",
+      "expiration_value": "float64",
+      "expiration_unit": "float64",
+      "expirationdate": "float64",
+      "dispensation": "float64",
+      "fill_quantity": "float64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 250,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "starttime",
+      "stoptime",
+      "entertime",
+      "verifiedtime",
+      "expirationdate"
+    ],
+    "ts_min_max": {
+      "starttime": [
+        "2110-04-11 15:00:00",
+        "2201-12-13 20:00:00"
+      ],
+      "stoptime": [
+        "2110-04-11 17:00:00",
+        "2201-12-17 18:00:00"
+      ],
+      "entertime": [
+        "2110-04-11 15:15:24",
+        "2201-12-13 19:28:50"
+      ],
+      "verifiedtime": [
+        "2110-04-11 15:15:24",
+        "2201-12-13 19:28:50"
+      ],
+      "expirationdate": [
+        null,
+        null
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "pharmacy_id": 0.0,
+      "poe_id": 0.56,
+      "starttime": 0.0,
+      "stoptime": 0.53,
+      "medication": 6.62,
+      "proc_type": 0.0,
+      "status": 0.0,
+      "entertime": 0.0,
+      "verifiedtime": 0.04,
+      "route": 0.57,
+      "frequency": 0.57,
+      "disp_sched": 41.79,
+      "infusion_type": 93.24,
+      "sliding_scale": 86.67,
+      "lockout_interval": 98.35,
+      "basal_rate": 98.35,
+      "one_hr_max": 99.61,
+      "doses_per_24_hrs": 39.46,
+      "duration": 73.81,
+      "duration_interval": 0.57,
+      "expiration_value": 14.97,
+      "expiration_unit": 0.67,
+      "expirationdate": 100.0,
+      "dispensation": 0.59,
+      "fill_quantity": 100.0
+    },
+    "sample": [
+      {
+        "subject_id": 10027602,
+        "hadm_id": 28166872,
+        "pharmacy_id": 24340150,
+        "poe_id": null,
+        "starttime": "2201-10-30 12:00:00",
+        "stoptime": null,
+        "medication": "Midazolam",
+        "proc_type": "Miscellaneous Charges",
+        "status": "Inactive (Due to a change order)",
+        "entertime": "2201-10-30 12:32:11",
+        "verifiedtime": null,
+        "route": null,
+        "frequency": null,
+        "disp_sched": null,
+        "infusion_type": null,
+        "sliding_scale": null,
+        "lockout_interval": null,
+        "basal_rate": null,
+        "one_hr_max": null,
+        "doses_per_24_hrs": null,
+        "duration": null,
+        "duration_interval": null,
+        "expiration_value": null,
+        "expiration_unit": null,
+        "expirationdate": null,
+        "dispensation": null,
+        "fill_quantity": null
+      },
+      {
+        "subject_id": 10027602,
+        "hadm_id": 28166872,
+        "pharmacy_id": 14435820,
+        "poe_id": null,
+        "starttime": "2201-10-30 12:00:00",
+        "stoptime": null,
+        "medication": "Midazolam",
+        "proc_type": "Miscellaneous Charges",
+        "status": "Inactive (Due to a change order)",
+        "entertime": "2201-10-30 12:54:34",
+        "verifiedtime": null,
+        "route": null,
+        "frequency": null,
+        "disp_sched": null,
+        "infusion_type": null,
+        "sliding_scale": null,
+        "lockout_interval": null,
+        "basal_rate": null,
+        "one_hr_max": null,
+        "doses_per_24_hrs": null,
+        "duration": null,
+        "duration_interval": null,
+        "expiration_value": null,
+        "expiration_unit": null,
+        "expirationdate": null,
+        "dispensation": null,
+        "fill_quantity": null
+      },
+      {
+        "subject_id": 10027602,
+        "hadm_id": 28166872,
+        "pharmacy_id": 40720238,
+        "poe_id": null,
+        "starttime": "2201-10-30 12:00:00",
+        "stoptime": null,
+        "medication": "Fentanyl Citrate",
+        "proc_type": "Miscellaneous Charges",
+        "status": "Inactive (Due to a change order)",
+        "entertime": "2201-10-30 12:32:11",
+        "verifiedtime": null,
+        "route": null,
+        "frequency": null,
+        "disp_sched": null,
+        "infusion_type": null,
+        "sliding_scale": null,
+        "lockout_interval": null,
+        "basal_rate": null,
+        "one_hr_max": null,
+        "doses_per_24_hrs": null,
+        "duration": null,
+        "duration_interval": null,
+        "expiration_value": null,
+        "expiration_unit": null,
+        "expirationdate": null,
+        "dispensation": null,
+        "fill_quantity": null
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "poe",
+    "filename": "poe.csv.gz",
+    "total_rows": 45154,
+    "columns": [
+      "poe_id",
+      "poe_seq",
+      "subject_id",
+      "hadm_id",
+      "ordertime",
+      "order_type",
+      "order_subtype",
+      "transaction_type",
+      "discontinue_of_poe_id",
+      "discontinued_by_poe_id",
+      "order_provider_id",
+      "order_status"
+    ],
+    "dtypes": {
+      "poe_id": "object",
+      "poe_seq": "int64",
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "ordertime": "object",
+      "order_type": "object",
+      "order_subtype": "object",
+      "transaction_type": "object",
+      "discontinue_of_poe_id": "object",
+      "discontinued_by_poe_id": "object",
+      "order_provider_id": "object",
+      "order_status": "object"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 272,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "ordertime"
+    ],
+    "ts_min_max": {
+      "ordertime": [
+        "2110-04-11 09:13:54",
+        "2201-12-17 12:39:00"
+      ]
+    },
+    "null_pcts": {
+      "poe_id": 0.0,
+      "poe_seq": 0.0,
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "ordertime": 0.0,
+      "order_type": 0.0,
+      "order_subtype": 63.77,
+      "transaction_type": 0.0,
+      "discontinue_of_poe_id": 76.72,
+      "discontinued_by_poe_id": 76.84,
+      "order_provider_id": 1.75,
+      "order_status": 0.0
+    },
+    "sample": [
+      {
+        "poe_id": "10002930-456",
+        "poe_seq": 456,
+        "subject_id": 10002930,
+        "hadm_id": 20282368,
+        "ordertime": "2201-03-23 19:14:33",
+        "order_type": "General Care",
+        "order_subtype": "Other",
+        "transaction_type": "New",
+        "discontinue_of_poe_id": null,
+        "discontinued_by_poe_id": null,
+        "order_provider_id": "P04TDP",
+        "order_status": "Inactive"
+      },
+      {
+        "poe_id": "10002930-454",
+        "poe_seq": 454,
+        "subject_id": 10002930,
+        "hadm_id": 20282368,
+        "ordertime": "2201-03-23 19:14:33",
+        "order_type": "General Care",
+        "order_subtype": "Vitals/Monitoring",
+        "transaction_type": "New",
+        "discontinue_of_poe_id": null,
+        "discontinued_by_poe_id": null,
+        "order_provider_id": "P04TDP",
+        "order_status": "Inactive"
+      },
+      {
+        "poe_id": "10002930-455",
+        "poe_seq": 455,
+        "subject_id": 10002930,
+        "hadm_id": 20282368,
+        "ordertime": "2201-03-23 19:14:33",
+        "order_type": "General Care",
+        "order_subtype": "Activity",
+        "transaction_type": "New",
+        "discontinue_of_poe_id": null,
+        "discontinued_by_poe_id": null,
+        "order_provider_id": "P04TDP",
+        "order_status": "Inactive"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "poe_detail",
+    "filename": "poe_detail.csv.gz",
+    "total_rows": 3795,
+    "columns": [
+      "poe_id",
+      "poe_seq",
+      "subject_id",
+      "field_name",
+      "field_value"
+    ],
+    "dtypes": {
+      "poe_id": "object",
+      "poe_seq": "int64",
+      "subject_id": "int64",
+      "field_name": "object",
+      "field_value": "object"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "poe_id": 0.0,
+      "poe_seq": 0.0,
+      "subject_id": 0.0,
+      "field_name": 0.0,
+      "field_value": 0.0
+    },
+    "sample": [
+      {
+        "poe_id": "10011398-23",
+        "poe_seq": 23,
+        "subject_id": 10011398,
+        "field_name": "Admit to",
+        "field_value": "Surgery"
+      },
+      {
+        "poe_id": "10011398-103",
+        "poe_seq": 103,
+        "subject_id": 10011398,
+        "field_name": "Transfer to",
+        "field_value": "Surgery"
+      },
+      {
+        "poe_id": "10011398-163",
+        "poe_seq": 163,
+        "subject_id": 10011398,
+        "field_name": "Discharge Planning",
+        "field_value": "Finalized"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "prescriptions",
+    "filename": "prescriptions.csv.gz",
+    "total_rows": 18087,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "pharmacy_id",
+      "poe_id",
+      "poe_seq",
+      "order_provider_id",
+      "starttime",
+      "stoptime",
+      "drug_type",
+      "drug",
+      "formulary_drug_cd",
+      "gsn",
+      "ndc",
+      "prod_strength",
+      "form_rx",
+      "dose_val_rx",
+      "dose_unit_rx",
+      "form_val_disp",
+      "form_unit_disp",
+      "doses_per_24_hrs",
+      "route"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "pharmacy_id": "int64",
+      "poe_id": "object",
+      "poe_seq": "float64",
+      "order_provider_id": "object",
+      "starttime": "object",
+      "stoptime": "object",
+      "drug_type": "object",
+      "drug": "object",
+      "formulary_drug_cd": "object",
+      "gsn": "object",
+      "ndc": "float64",
+      "prod_strength": "object",
+      "form_rx": "float64",
+      "dose_val_rx": "float64",
+      "dose_unit_rx": "object",
+      "form_val_disp": "float64",
+      "form_unit_disp": "object",
+      "doses_per_24_hrs": "float64",
+      "route": "object"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 250,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "starttime",
+      "stoptime"
+    ],
+    "ts_min_max": {
+      "starttime": [
+        "2110-04-11 15:00:00",
+        "2201-12-13 20:00:00"
+      ],
+      "stoptime": [
+        "2110-04-11 17:00:00",
+        "2201-12-17 18:00:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "pharmacy_id": 0.0,
+      "poe_id": 0.65,
+      "poe_seq": 0.65,
+      "order_provider_id": 0.52,
+      "starttime": 0.0,
+      "stoptime": 0.08,
+      "drug_type": 0.0,
+      "drug": 0.0,
+      "formulary_drug_cd": 0.07,
+      "gsn": 13.93,
+      "ndc": 0.12,
+      "prod_strength": 0.05,
+      "form_rx": 99.93,
+      "dose_val_rx": 0.05,
+      "dose_unit_rx": 0.05,
+      "form_val_disp": 0.05,
+      "form_unit_disp": 0.05,
+      "doses_per_24_hrs": 40.82,
+      "route": 0.03
+    },
+    "sample": [
+      {
+        "subject_id": 10027602,
+        "hadm_id": 28166872,
+        "pharmacy_id": 27168639,
+        "poe_id": null,
+        "poe_seq": null,
+        "order_provider_id": null,
+        "starttime": "2201-10-30 12:00:00",
+        "stoptime": null,
+        "drug_type": "MAIN",
+        "drug": "Fentanyl Citrate",
+        "formulary_drug_cd": "FENT2I",
+        "gsn": null,
+        "ndc": null,
+        "prod_strength": null,
+        "form_rx": null,
+        "dose_val_rx": null,
+        "dose_unit_rx": null,
+        "form_val_disp": null,
+        "form_unit_disp": null,
+        "doses_per_24_hrs": null,
+        "route": null
+      },
+      {
+        "subject_id": 10027602,
+        "hadm_id": 28166872,
+        "pharmacy_id": 40720238,
+        "poe_id": null,
+        "poe_seq": null,
+        "order_provider_id": null,
+        "starttime": "2201-10-30 12:00:00",
+        "stoptime": null,
+        "drug_type": "MAIN",
+        "drug": "Fentanyl Citrate",
+        "formulary_drug_cd": "FENT2I",
+        "gsn": null,
+        "ndc": null,
+        "prod_strength": null,
+        "form_rx": null,
+        "dose_val_rx": null,
+        "dose_unit_rx": null,
+        "form_val_disp": null,
+        "form_unit_disp": null,
+        "doses_per_24_hrs": null,
+        "route": null
+      },
+      {
+        "subject_id": 10027602,
+        "hadm_id": 28166872,
+        "pharmacy_id": 62845687,
+        "poe_id": null,
+        "poe_seq": null,
+        "order_provider_id": null,
+        "starttime": "2201-10-31 12:00:00",
+        "stoptime": null,
+        "drug_type": "MAIN",
+        "drug": "Lorazepam",
+        "formulary_drug_cd": "LORA2I",
+        "gsn": null,
+        "ndc": null,
+        "prod_strength": null,
+        "form_rx": null,
+        "dose_val_rx": null,
+        "dose_unit_rx": null,
+        "form_val_disp": null,
+        "form_unit_disp": null,
+        "doses_per_24_hrs": null,
+        "route": null
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "procedures_icd",
+    "filename": "procedures_icd.csv.gz",
+    "total_rows": 722,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "seq_num",
+      "chartdate",
+      "icd_code",
+      "icd_version"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "seq_num": "int64",
+      "chartdate": "object",
+      "icd_code": "int64",
+      "icd_version": "int64"
+    },
+    "unique_subjects": 92,
+    "unique_hadms": 187,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "chartdate"
+    ],
+    "ts_min_max": {
+      "chartdate": [
+        "2110-04-11 00:00:00",
+        "2201-12-12 00:00:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "seq_num": 0.0,
+      "chartdate": 0.0,
+      "icd_code": 0.0,
+      "icd_version": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10011398,
+        "hadm_id": 27505812,
+        "seq_num": 3,
+        "chartdate": "2146-12-15",
+        "icd_code": 3961,
+        "icd_version": 9
+      },
+      {
+        "subject_id": 10011398,
+        "hadm_id": 27505812,
+        "seq_num": 2,
+        "chartdate": "2146-12-15",
+        "icd_code": 3615,
+        "icd_version": 9
+      },
+      {
+        "subject_id": 10011398,
+        "hadm_id": 27505812,
+        "seq_num": 1,
+        "chartdate": "2146-12-15",
+        "icd_code": 3614,
+        "icd_version": 9
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "provider",
+    "filename": "provider.csv.gz",
+    "total_rows": 40508,
+    "columns": [
+      "provider_id"
+    ],
+    "dtypes": {
+      "provider_id": "object"
+    },
+    "unique_subjects": 0,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "provider_id": 0.0
+    },
+    "sample": [
+      {
+        "provider_id": "P003F3"
+      },
+      {
+        "provider_id": "P005JG"
+      },
+      {
+        "provider_id": "P005MB"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "services",
+    "filename": "services.csv.gz",
+    "total_rows": 319,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "transfertime",
+      "prev_service",
+      "curr_service"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "transfertime": "object",
+      "prev_service": "object",
+      "curr_service": "object"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 275,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "transfertime"
+    ],
+    "ts_min_max": {
+      "transfertime": [
+        "2110-04-11 15:09:36",
+        "2201-12-11 03:04:13"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "transfertime": 0.0,
+      "prev_service": 86.21,
+      "curr_service": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10001725,
+        "hadm_id": 25563031,
+        "transfertime": "2110-04-11 15:09:36",
+        "prev_service": null,
+        "curr_service": "GYN"
+      },
+      {
+        "subject_id": 10019003,
+        "hadm_id": 28003918,
+        "transfertime": "2148-12-21 03:32:53",
+        "prev_service": null,
+        "curr_service": "GYN"
+      },
+      {
+        "subject_id": 10007818,
+        "hadm_id": 22987108,
+        "transfertime": "2146-06-10 16:38:18",
+        "prev_service": null,
+        "curr_service": "MED"
+      }
+    ]
+  },
+  {
+    "module": "hosp",
+    "table_name": "transfers",
+    "filename": "transfers.csv.gz",
+    "total_rows": 1190,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "transfer_id",
+      "eventtype",
+      "careunit",
+      "intime",
+      "outtime"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "transfer_id": "int64",
+      "eventtype": "object",
+      "careunit": "float64",
+      "intime": "object",
+      "outtime": "float64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 275,
+    "unique_stays": 0,
+    "timestamp_cols": [
+      "intime",
+      "outtime"
+    ],
+    "ts_min_max": {
+      "intime": [
+        "2110-04-11 15:09:36",
+        "2201-12-17 13:48:45"
+      ],
+      "outtime": [
+        "2110-04-11 15:52:22",
+        "2201-12-17 13:48:45"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 4.54,
+      "transfer_id": 0.0,
+      "eventtype": 0.0,
+      "careunit": 23.11,
+      "intime": 0.0,
+      "outtime": 23.11
+    },
+    "sample": [
+      {
+        "subject_id": 10009049,
+        "hadm_id": 22995465,
+        "transfer_id": 30030230,
+        "eventtype": "discharge",
+        "careunit": null,
+        "intime": "2174-05-31 14:21:47",
+        "outtime": null
+      },
+      {
+        "subject_id": 10025612,
+        "hadm_id": 23403708,
+        "transfer_id": 32533329,
+        "eventtype": "discharge",
+        "careunit": null,
+        "intime": "2125-10-03 12:25:27",
+        "outtime": null
+      },
+      {
+        "subject_id": 10020786,
+        "hadm_id": 23488445,
+        "transfer_id": 37922399,
+        "eventtype": "discharge",
+        "careunit": null,
+        "intime": "2189-06-13 17:25:44",
+        "outtime": null
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "caregiver",
+    "filename": "caregiver.csv.gz",
+    "total_rows": 15468,
+    "columns": [
+      "caregiver_id"
+    ],
+    "dtypes": {
+      "caregiver_id": "int64"
+    },
+    "unique_subjects": 0,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "caregiver_id": 0.0
+    },
+    "sample": [
+      {
+        "caregiver_id": 444
+      },
+      {
+        "caregiver_id": 1016
+      },
+      {
+        "caregiver_id": 1135
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "chartevents",
+    "filename": "chartevents.csv.gz",
+    "total_rows": 668862,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "caregiver_id",
+      "charttime",
+      "storetime",
+      "itemid",
+      "value",
+      "valuenum",
+      "valueuom",
+      "warning"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "stay_id": "int64",
+      "caregiver_id": "int64",
+      "charttime": "object",
+      "storetime": "object",
+      "itemid": "int64",
+      "value": "object",
+      "valuenum": "float64",
+      "valueuom": "object",
+      "warning": "int64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 128,
+    "unique_stays": 140,
+    "timestamp_cols": [
+      "charttime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "charttime": [
+        "2110-04-11 15:52:00",
+        "2201-12-13 18:16:00"
+      ],
+      "storetime": [
+        "2110-04-11 16:01:00",
+        "2201-12-13 18:06:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "stay_id": 0.0,
+      "caregiver_id": 3.62,
+      "charttime": 0.0,
+      "storetime": 0.17,
+      "itemid": 0.0,
+      "value": 3.1,
+      "valuenum": 61.51,
+      "valueuom": 75.69,
+      "warning": 0.17
+    },
+    "sample": [
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 6770,
+        "charttime": "2132-12-16 00:00:00",
+        "storetime": "2132-12-15 23:45:00",
+        "itemid": 225054,
+        "value": "On ",
+        "valuenum": null,
+        "valueuom": null,
+        "warning": 0
+      },
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 6770,
+        "charttime": "2132-12-16 00:00:00",
+        "storetime": "2132-12-15 23:43:00",
+        "itemid": 223769,
+        "value": "100",
+        "valuenum": 100.0,
+        "valueuom": "%",
+        "warning": 0
+      },
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 6770,
+        "charttime": "2132-12-16 00:00:00",
+        "storetime": "2132-12-15 23:47:00",
+        "itemid": 223956,
+        "value": "Atrial demand",
+        "valuenum": null,
+        "valueuom": null,
+        "warning": 0
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "d_items",
+    "filename": "d_items.csv.gz",
+    "total_rows": 4014,
+    "columns": [
+      "itemid",
+      "label",
+      "abbreviation",
+      "linksto",
+      "category",
+      "unitname",
+      "param_type",
+      "lownormalvalue",
+      "highnormalvalue"
+    ],
+    "dtypes": {
+      "itemid": "int64",
+      "label": "object",
+      "abbreviation": "object",
+      "linksto": "object",
+      "category": "object",
+      "unitname": "float64",
+      "param_type": "object",
+      "lownormalvalue": "float64",
+      "highnormalvalue": "float64"
+    },
+    "unique_subjects": 0,
+    "unique_hadms": 0,
+    "unique_stays": 0,
+    "timestamp_cols": [],
+    "ts_min_max": {},
+    "null_pcts": {
+      "itemid": 0.0,
+      "label": 0.0,
+      "abbreviation": 0.0,
+      "linksto": 0.0,
+      "category": 0.0,
+      "unitname": 72.4,
+      "param_type": 0.0,
+      "lownormalvalue": 99.53,
+      "highnormalvalue": 99.45
+    },
+    "sample": [
+      {
+        "itemid": 226228,
+        "label": "Gender",
+        "abbreviation": "Gender",
+        "linksto": "chartevents",
+        "category": "ADT",
+        "unitname": null,
+        "param_type": "Text",
+        "lownormalvalue": null,
+        "highnormalvalue": null
+      },
+      {
+        "itemid": 226545,
+        "label": "Race",
+        "abbreviation": "Race",
+        "linksto": "chartevents",
+        "category": "ADT",
+        "unitname": null,
+        "param_type": "Text",
+        "lownormalvalue": null,
+        "highnormalvalue": null
+      },
+      {
+        "itemid": 229877,
+        "label": "Suction events (CH)",
+        "abbreviation": "Suction events (CH)",
+        "linksto": "chartevents",
+        "category": "ECMO",
+        "unitname": null,
+        "param_type": "Text",
+        "lownormalvalue": null,
+        "highnormalvalue": null
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "datetimeevents",
+    "filename": "datetimeevents.csv.gz",
+    "total_rows": 15280,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "caregiver_id",
+      "charttime",
+      "storetime",
+      "itemid",
+      "value",
+      "valueuom",
+      "warning"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "stay_id": "int64",
+      "caregiver_id": "int64",
+      "charttime": "object",
+      "storetime": "object",
+      "itemid": "int64",
+      "value": "object",
+      "valueuom": "object",
+      "warning": "int64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 127,
+    "unique_stays": 138,
+    "timestamp_cols": [
+      "charttime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "charttime": [
+        "2110-04-11 16:02:00",
+        "2201-12-13 14:18:00"
+      ],
+      "storetime": [
+        "2110-04-11 16:03:00",
+        "2201-12-13 14:18:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "stay_id": 0.0,
+      "caregiver_id": 0.0,
+      "charttime": 0.0,
+      "storetime": 0.0,
+      "itemid": 0.0,
+      "value": 0.0,
+      "valueuom": 0.0,
+      "warning": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10002428,
+        "hadm_id": 23473524,
+        "stay_id": 35479615,
+        "caregiver_id": 29441,
+        "charttime": "2156-05-15 10:50:00",
+        "storetime": "2156-05-15 10:50:00",
+        "itemid": 225343,
+        "value": "2156-05-11 00:00:00",
+        "valueuom": "Date",
+        "warning": 0
+      },
+      {
+        "subject_id": 10002428,
+        "hadm_id": 23473524,
+        "stay_id": 35479615,
+        "caregiver_id": 29441,
+        "charttime": "2156-05-15 10:50:00",
+        "storetime": "2156-05-15 10:50:00",
+        "itemid": 225348,
+        "value": "2156-05-11 00:00:00",
+        "valueuom": "Date",
+        "warning": 0
+      },
+      {
+        "subject_id": 10002428,
+        "hadm_id": 23473524,
+        "stay_id": 35479615,
+        "caregiver_id": 29441,
+        "charttime": "2156-05-15 10:50:00",
+        "storetime": "2156-05-15 10:50:00",
+        "itemid": 225345,
+        "value": "2156-05-14 09:00:00",
+        "valueuom": "Date and Time",
+        "warning": 0
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "icustays",
+    "filename": "icustays.csv.gz",
+    "total_rows": 140,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "first_careunit",
+      "last_careunit",
+      "intime",
+      "outtime",
+      "los"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "stay_id": "int64",
+      "first_careunit": "object",
+      "last_careunit": "object",
+      "intime": "object",
+      "outtime": "object",
+      "los": "float64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 128,
+    "unique_stays": 140,
+    "timestamp_cols": [
+      "intime",
+      "outtime"
+    ],
+    "ts_min_max": {
+      "intime": [
+        "2110-04-11 15:52:22",
+        "2201-12-11 20:11:52"
+      ],
+      "outtime": [
+        "2110-04-12 23:59:56",
+        "2201-12-13 18:29:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "stay_id": 0.0,
+      "first_careunit": 0.0,
+      "last_careunit": 0.0,
+      "intime": 0.0,
+      "outtime": 0.0,
+      "los": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10018328,
+        "hadm_id": 23786647,
+        "stay_id": 31269608,
+        "first_careunit": "Neuro Stepdown",
+        "last_careunit": "Neuro Stepdown",
+        "intime": "2154-04-24 23:03:44",
+        "outtime": "2154-05-02 15:55:21",
+        "los": 7.702511574074075
+      },
+      {
+        "subject_id": 10020187,
+        "hadm_id": 24104168,
+        "stay_id": 37509585,
+        "first_careunit": "Neuro Surgical Intensive Care Unit (Neuro SICU)",
+        "last_careunit": "Neuro Stepdown",
+        "intime": "2169-01-15 04:56:00",
+        "outtime": "2169-01-20 15:47:50",
+        "los": 5.452662037037037
+      },
+      {
+        "subject_id": 10020187,
+        "hadm_id": 26842957,
+        "stay_id": 32554129,
+        "first_careunit": "Neuro Intermediate",
+        "last_careunit": "Neuro Intermediate",
+        "intime": "2170-02-24 18:18:46",
+        "outtime": "2170-02-25 15:15:26",
+        "los": 0.8726851851851852
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "ingredientevents",
+    "filename": "ingredientevents.csv.gz",
+    "total_rows": 25728,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "caregiver_id",
+      "starttime",
+      "endtime",
+      "storetime",
+      "itemid",
+      "amount",
+      "amountuom",
+      "rate",
+      "rateuom",
+      "orderid",
+      "linkorderid",
+      "statusdescription",
+      "originalamount",
+      "originalrate"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "stay_id": "int64",
+      "caregiver_id": "int64",
+      "starttime": "object",
+      "endtime": "object",
+      "storetime": "object",
+      "itemid": "int64",
+      "amount": "float64",
+      "amountuom": "object",
+      "rate": "float64",
+      "rateuom": "object",
+      "orderid": "int64",
+      "linkorderid": "int64",
+      "statusdescription": "object",
+      "originalamount": "int64",
+      "originalrate": "float64"
+    },
+    "unique_subjects": 99,
+    "unique_hadms": 127,
+    "unique_stays": 138,
+    "timestamp_cols": [
+      "starttime",
+      "endtime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "starttime": [
+        "2110-04-11 15:55:00",
+        "2201-12-13 16:51:00"
+      ],
+      "endtime": [
+        "2110-04-11 15:56:00",
+        "2201-12-13 18:28:00"
+      ],
+      "storetime": [
+        "2110-04-11 18:43:00",
+        "2201-12-13 16:51:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "stay_id": 0.0,
+      "caregiver_id": 0.0,
+      "starttime": 0.0,
+      "endtime": 0.0,
+      "storetime": 0.0,
+      "itemid": 0.0,
+      "amount": 0.0,
+      "amountuom": 0.0,
+      "rate": 35.31,
+      "rateuom": 35.31,
+      "orderid": 0.0,
+      "linkorderid": 0.0,
+      "statusdescription": 0.0,
+      "originalamount": 0.0,
+      "originalrate": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 4793,
+        "starttime": "2132-12-17 05:00:00",
+        "endtime": "2132-12-17 06:00:00",
+        "storetime": "2132-12-17 06:01:00",
+        "itemid": 227074,
+        "amount": 49.999998807907104,
+        "amountuom": "ml",
+        "rate": 50.0,
+        "rateuom": "mL/hour",
+        "orderid": 7330951,
+        "linkorderid": 7330951,
+        "statusdescription": "FinishedRunning",
+        "originalamount": 0,
+        "originalrate": 50.0
+      },
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 4793,
+        "starttime": "2132-12-17 05:00:00",
+        "endtime": "2132-12-17 06:00:00",
+        "storetime": "2132-12-17 06:01:00",
+        "itemid": 220490,
+        "amount": 49.999998807907104,
+        "amountuom": "ml",
+        "rate": 50.0,
+        "rateuom": "mL/hour",
+        "orderid": 7330951,
+        "linkorderid": 7330951,
+        "statusdescription": "FinishedRunning",
+        "originalamount": 0,
+        "originalrate": 50.0
+      },
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 20310,
+        "starttime": "2132-12-17 12:00:00",
+        "endtime": "2132-12-17 13:00:00",
+        "storetime": "2132-12-17 12:48:00",
+        "itemid": 220490,
+        "amount": 249.99999046325684,
+        "amountuom": "ml",
+        "rate": 249.9999847412109,
+        "rateuom": "mL/hour",
+        "orderid": 5334154,
+        "linkorderid": 5334154,
+        "statusdescription": "FinishedRunning",
+        "originalamount": 0,
+        "originalrate": 250.0
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "inputevents",
+    "filename": "inputevents.csv.gz",
+    "total_rows": 20404,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "caregiver_id",
+      "starttime",
+      "endtime",
+      "storetime",
+      "itemid",
+      "amount",
+      "amountuom",
+      "rate",
+      "rateuom",
+      "orderid",
+      "linkorderid",
+      "ordercategoryname",
+      "secondaryordercategoryname",
+      "ordercomponenttypedescription",
+      "ordercategorydescription",
+      "patientweight",
+      "totalamount",
+      "totalamountuom",
+      "isopenbag",
+      "continueinnextdept",
+      "statusdescription",
+      "originalamount",
+      "originalrate"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "stay_id": "int64",
+      "caregiver_id": "int64",
+      "starttime": "object",
+      "endtime": "object",
+      "storetime": "object",
+      "itemid": "int64",
+      "amount": "float64",
+      "amountuom": "object",
+      "rate": "float64",
+      "rateuom": "object",
+      "orderid": "int64",
+      "linkorderid": "int64",
+      "ordercategoryname": "object",
+      "secondaryordercategoryname": "object",
+      "ordercomponenttypedescription": "object",
+      "ordercategorydescription": "object",
+      "patientweight": "int64",
+      "totalamount": "int64",
+      "totalamountuom": "object",
+      "isopenbag": "int64",
+      "continueinnextdept": "int64",
+      "statusdescription": "object",
+      "originalamount": "float64",
+      "originalrate": "float64"
+    },
+    "unique_subjects": 99,
+    "unique_hadms": 127,
+    "unique_stays": 138,
+    "timestamp_cols": [
+      "starttime",
+      "endtime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "starttime": [
+        "2110-04-11 15:55:00",
+        "2201-12-13 16:51:00"
+      ],
+      "endtime": [
+        "2110-04-11 15:56:00",
+        "2201-12-13 18:28:00"
+      ],
+      "storetime": [
+        "2110-04-11 18:43:00",
+        "2201-12-13 16:51:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "stay_id": 0.0,
+      "caregiver_id": 0.0,
+      "starttime": 0.0,
+      "endtime": 0.0,
+      "storetime": 0.0,
+      "itemid": 0.0,
+      "amount": 0.0,
+      "amountuom": 0.0,
+      "rate": 45.9,
+      "rateuom": 45.9,
+      "orderid": 0.0,
+      "linkorderid": 0.0,
+      "ordercategoryname": 0.0,
+      "secondaryordercategoryname": 30.68,
+      "ordercomponenttypedescription": 0.0,
+      "ordercategorydescription": 0.0,
+      "patientweight": 0.0,
+      "totalamount": 16.24,
+      "totalamountuom": 16.23,
+      "isopenbag": 0.0,
+      "continueinnextdept": 0.0,
+      "statusdescription": 0.0,
+      "originalamount": 0.0,
+      "originalrate": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 4793,
+        "starttime": "2132-12-16 19:50:00",
+        "endtime": "2132-12-16 19:51:00",
+        "storetime": "2132-12-16 19:50:00",
+        "itemid": 225798,
+        "amount": 1.0,
+        "amountuom": "dose",
+        "rate": null,
+        "rateuom": null,
+        "orderid": 3316866,
+        "linkorderid": 3316866,
+        "ordercategoryname": "08-Antibiotics (IV)",
+        "secondaryordercategoryname": "02-Fluids (Crystalloids)",
+        "ordercomponenttypedescription": "Main order parameter",
+        "ordercategorydescription": "Drug Push",
+        "patientweight": 91,
+        "totalamount": 500,
+        "totalamountuom": "ml",
+        "isopenbag": 0,
+        "continueinnextdept": 0,
+        "statusdescription": "FinishedRunning",
+        "originalamount": 1.0,
+        "originalrate": 1.0
+      },
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 92805,
+        "starttime": "2132-12-15 20:15:00",
+        "endtime": "2132-12-15 20:16:00",
+        "storetime": "2132-12-15 20:11:00",
+        "itemid": 225798,
+        "amount": 1.0,
+        "amountuom": "dose",
+        "rate": null,
+        "rateuom": null,
+        "orderid": 8515923,
+        "linkorderid": 8515923,
+        "ordercategoryname": "08-Antibiotics (IV)",
+        "secondaryordercategoryname": "02-Fluids (Crystalloids)",
+        "ordercomponenttypedescription": "Main order parameter",
+        "ordercategorydescription": "Drug Push",
+        "patientweight": 91,
+        "totalamount": 500,
+        "totalamountuom": "ml",
+        "isopenbag": 0,
+        "continueinnextdept": 0,
+        "statusdescription": "FinishedRunning",
+        "originalamount": 1.0,
+        "originalrate": 1.0
+      },
+      {
+        "subject_id": 10005817,
+        "hadm_id": 20626031,
+        "stay_id": 32604416,
+        "caregiver_id": 20310,
+        "starttime": "2132-12-17 09:15:00",
+        "endtime": "2132-12-17 09:16:00",
+        "storetime": "2132-12-17 09:28:00",
+        "itemid": 225798,
+        "amount": 1.0,
+        "amountuom": "dose",
+        "rate": null,
+        "rateuom": null,
+        "orderid": 8912103,
+        "linkorderid": 8912103,
+        "ordercategoryname": "08-Antibiotics (IV)",
+        "secondaryordercategoryname": "02-Fluids (Crystalloids)",
+        "ordercomponenttypedescription": "Main order parameter",
+        "ordercategorydescription": "Drug Push",
+        "patientweight": 91,
+        "totalamount": 500,
+        "totalamountuom": "ml",
+        "isopenbag": 0,
+        "continueinnextdept": 0,
+        "statusdescription": "FinishedRunning",
+        "originalamount": 1.0,
+        "originalrate": 1.0
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "outputevents",
+    "filename": "outputevents.csv.gz",
+    "total_rows": 9362,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "caregiver_id",
+      "charttime",
+      "storetime",
+      "itemid",
+      "value",
+      "valueuom"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "stay_id": "int64",
+      "caregiver_id": "int64",
+      "charttime": "object",
+      "storetime": "object",
+      "itemid": "int64",
+      "value": "int64",
+      "valueuom": "object"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 126,
+    "unique_stays": 137,
+    "timestamp_cols": [
+      "charttime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "charttime": [
+        "2110-04-11 17:00:00",
+        "2201-12-13 18:00:00"
+      ],
+      "storetime": [
+        "2110-04-11 18:44:00",
+        "2201-12-13 17:50:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "stay_id": 0.0,
+      "caregiver_id": 0.0,
+      "charttime": 0.0,
+      "storetime": 0.0,
+      "itemid": 0.0,
+      "value": 0.0,
+      "valueuom": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10002428,
+        "hadm_id": 23473524,
+        "stay_id": 35479615,
+        "caregiver_id": 29441,
+        "charttime": "2156-05-15 18:00:00",
+        "storetime": "2156-05-15 17:42:00",
+        "itemid": 226583,
+        "value": 600,
+        "valueuom": "ml"
+      },
+      {
+        "subject_id": 10002428,
+        "hadm_id": 23473524,
+        "stay_id": 35479615,
+        "caregiver_id": 29441,
+        "charttime": "2156-05-15 12:00:00",
+        "storetime": "2156-05-15 12:08:00",
+        "itemid": 226559,
+        "value": 60,
+        "valueuom": "ml"
+      },
+      {
+        "subject_id": 10002428,
+        "hadm_id": 23473524,
+        "stay_id": 35479615,
+        "caregiver_id": 29441,
+        "charttime": "2156-05-15 13:00:00",
+        "storetime": "2156-05-15 13:00:00",
+        "itemid": 226559,
+        "value": 45,
+        "valueuom": "ml"
+      }
+    ]
+  },
+  {
+    "module": "icu",
+    "table_name": "procedureevents",
+    "filename": "procedureevents.csv.gz",
+    "total_rows": 1468,
+    "columns": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "caregiver_id",
+      "starttime",
+      "endtime",
+      "storetime",
+      "itemid",
+      "value",
+      "valueuom",
+      "location",
+      "locationcategory",
+      "orderid",
+      "linkorderid",
+      "ordercategoryname",
+      "ordercategorydescription",
+      "patientweight",
+      "isopenbag",
+      "continueinnextdept",
+      "statusdescription",
+      "ORIGINALAMOUNT",
+      "ORIGINALRATE"
+    ],
+    "dtypes": {
+      "subject_id": "int64",
+      "hadm_id": "int64",
+      "stay_id": "int64",
+      "caregiver_id": "float64",
+      "starttime": "object",
+      "endtime": "object",
+      "storetime": "object",
+      "itemid": "int64",
+      "value": "int64",
+      "valueuom": "object",
+      "location": "object",
+      "locationcategory": "object",
+      "orderid": "int64",
+      "linkorderid": "int64",
+      "ordercategoryname": "object",
+      "ordercategorydescription": "object",
+      "patientweight": "int64",
+      "isopenbag": "int64",
+      "continueinnextdept": "int64",
+      "statusdescription": "object",
+      "ORIGINALAMOUNT": "int64",
+      "ORIGINALRATE": "int64"
+    },
+    "unique_subjects": 100,
+    "unique_hadms": 128,
+    "unique_stays": 138,
+    "timestamp_cols": [
+      "starttime",
+      "endtime",
+      "storetime"
+    ],
+    "ts_min_max": {
+      "starttime": [
+        "2110-04-11 16:02:00",
+        "2201-12-12 14:00:00"
+      ],
+      "endtime": [
+        "2110-04-12 23:59:00",
+        "2201-12-13 18:29:00"
+      ],
+      "storetime": [
+        "2110-11-30 18:42:00",
+        "2201-12-13 14:18:00"
+      ]
+    },
+    "null_pcts": {
+      "subject_id": 0.0,
+      "hadm_id": 0.0,
+      "stay_id": 0.0,
+      "caregiver_id": 16.49,
+      "starttime": 0.0,
+      "endtime": 0.0,
+      "storetime": 0.0,
+      "itemid": 0.0,
+      "value": 0.0,
+      "valueuom": 52.52,
+      "location": 75.95,
+      "locationcategory": 75.95,
+      "orderid": 0.0,
+      "linkorderid": 0.0,
+      "ordercategoryname": 0.0,
+      "ordercategorydescription": 0.0,
+      "patientweight": 0.0,
+      "isopenbag": 0.0,
+      "continueinnextdept": 0.0,
+      "statusdescription": 0.0,
+      "ORIGINALAMOUNT": 0.0,
+      "ORIGINALRATE": 0.0
+    },
+    "sample": [
+      {
+        "subject_id": 10027445,
+        "hadm_id": 26275841,
+        "stay_id": 34499716,
+        "caregiver_id": 10712.0,
+        "starttime": "2142-07-31 01:54:00",
+        "endtime": "2142-08-02 10:44:00",
+        "storetime": "2142-08-02 10:44:00",
+        "itemid": 225792,
+        "value": 3410,
+        "valueuom": "min",
+        "location": null,
+        "locationcategory": null,
+        "orderid": 532221,
+        "linkorderid": 532221,
+        "ordercategoryname": "Ventilation",
+        "ordercategorydescription": "ContinuousProcess",
+        "patientweight": 103,
+        "isopenbag": 1,
+        "continueinnextdept": 0,
+        "statusdescription": "FinishedRunning",
+        "ORIGINALAMOUNT": 3410,
+        "ORIGINALRATE": 1
+      },
+      {
+        "subject_id": 10027445,
+        "hadm_id": 26275841,
+        "stay_id": 34499716,
+        "caregiver_id": 80518.0,
+        "starttime": "2142-07-31 08:18:00",
+        "endtime": "2142-08-03 15:10:00",
+        "storetime": "2142-08-03 15:23:00",
+        "itemid": 224263,
+        "value": 4732,
+        "valueuom": "min",
+        "location": null,
+        "locationcategory": null,
+        "orderid": 401769,
+        "linkorderid": 401769,
+        "ordercategoryname": "Invasive Lines",
+        "ordercategorydescription": "ContinuousProcess",
+        "patientweight": 103,
+        "isopenbag": 1,
+        "continueinnextdept": 0,
+        "statusdescription": "FinishedRunning",
+        "ORIGINALAMOUNT": 4732,
+        "ORIGINALRATE": 1
+      },
+      {
+        "subject_id": 10027445,
+        "hadm_id": 26275841,
+        "stay_id": 34499716,
+        "caregiver_id": 96407.0,
+        "starttime": "2142-07-31 06:00:00",
+        "endtime": "2142-08-03 06:03:00",
+        "storetime": "2142-08-03 08:16:00",
+        "itemid": 224275,
+        "value": 4323,
+        "valueuom": "min",
+        "location": "Right Antecubital",
+        "locationcategory": "Peripheral",
+        "orderid": 9714245,
+        "linkorderid": 9714245,
+        "ordercategoryname": "Peripheral Lines",
+        "ordercategorydescription": "ContinuousProcess",
+        "patientweight": 103,
+        "isopenbag": 1,
+        "continueinnextdept": 0,
+        "statusdescription": "FinishedRunning",
+        "ORIGINALAMOUNT": 4323,
+        "ORIGINALRATE": 1
+      }
+    ]
+  }
+]

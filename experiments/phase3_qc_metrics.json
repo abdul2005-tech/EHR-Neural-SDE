@@ -1,0 +1,102 @@
+{
+  "qc_checks": {
+    "1_no_negative_T": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "2_T_monotonically_increasing": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "3_DeltaT_0_is_zero": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "4_no_negative_DeltaT": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "5_X_and_M_identical_shape": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "6_T_DeltaT_length_matches_X": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "7_M_binary_only": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "8_observed_value_has_M1": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "9_missing_value_has_M0": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "10_no_obs_outside_icu_stay": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "11_no_duplicate_timestamps": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "12_valid_array_structures": {
+      "passed": true,
+      "failed_trajectories": 0
+    },
+    "13_no_nans_in_T_or_DeltaT": {
+      "passed": true,
+      "failed_trajectories": 0
+    }
+  },
+  "summary_statistics": {
+    "14_total_trajectories": 140,
+    "14_total_unique_patients": 100,
+    "14_total_icu_stays": 140,
+    "15_trajectory_length_N": {
+      "mean": 139.69,
+      "median": 73.5,
+      "min": 1,
+      "max": 817,
+      "std": 158.44,
+      "total_timestamps": 19557
+    },
+    "16_icu_duration_hours": {
+      "mean": 88.31,
+      "median": 51.72,
+      "min": 0.57,
+      "max": 492.69,
+      "std": 93.18
+    },
+    "17_missingness_pct_per_feature": {
+      "heart_rate": 29.11,
+      "respiratory_rate": 29.12,
+      "spo2": 30.99,
+      "systolic_bp": 30.63,
+      "diastolic_bp": 30.63
+    },
+    "18_delta_t_hours": {
+      "mean": 0.6204,
+      "median": 0.9667,
+      "p25": 0.0667,
+      "p75": 1.0,
+      "p90": 1.0,
+      "min": 0.0167,
+      "max": 11.7333,
+      "std": 0.4769
+    },
+    "18_delta_t_minutes": {
+      "mean": 37.22,
+      "median": 58.0,
+      "p25": 4.0,
+      "p75": 60.0,
+      "p90": 60.0,
+      "min": 1.0,
+      "max": 704.0
+    }
+  }
+}

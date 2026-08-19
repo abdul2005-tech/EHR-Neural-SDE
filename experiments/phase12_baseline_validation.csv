@@ -1,0 +1,3 @@
+model_label,checkpoint,plausibility_pct,wasserstein_distance,ks_statistic,correlation_error,synth_diff_std,volatility_ratio,lag1_autocorr,diversity_rmse,mean_sigma,std_sigma
+12A Baseline (Phase 11),phase11_probabilistic.pt,97.09,2.0883,0.0946,0.1063,20.7967,23.3052,-0.0096,20.6316,12.6407,7.5808
+12B Independent Noise,phase12_independent.pt,98.42,3.2689,0.1374,0.1066,14.3015,16.0265,-0.0109,14.3078,8.7478,5.0545

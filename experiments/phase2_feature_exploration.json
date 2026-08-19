@@ -1,0 +1,581 @@
+{
+  "candidate_items_summary": [
+    {
+      "itemid": 220045,
+      "label": "Heart Rate",
+      "category": "Routine Vital Signs",
+      "unit_dict": "bpm",
+      "units_used": [
+        "bpm"
+      ],
+      "total_observations": 13913,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 0.0,
+      "max_val": 200.0,
+      "mean_val": 91.12,
+      "median_val": 90.0
+    },
+    {
+      "itemid": 220210,
+      "label": "Respiratory Rate",
+      "category": "Respiratory",
+      "unit_dict": "insp/min",
+      "units_used": [
+        "insp/min"
+      ],
+      "total_observations": 13913,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 0.0,
+      "max_val": 58.0,
+      "mean_val": 19.95,
+      "median_val": 20.0
+    },
+    {
+      "itemid": 220277,
+      "label": "O2 saturation pulseoxymetry",
+      "category": "Respiratory",
+      "unit_dict": "%",
+      "units_used": [
+        "%"
+      ],
+      "total_observations": 13540,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 29.0,
+      "max_val": 100.0,
+      "mean_val": 96.81,
+      "median_val": 97.0
+    },
+    {
+      "itemid": 220180,
+      "label": "Non Invasive Blood Pressure diastolic",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 8349,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 18.0,
+      "max_val": 162.0,
+      "mean_val": 63.34,
+      "median_val": 62.0
+    },
+    {
+      "itemid": 220179,
+      "label": "Non Invasive Blood Pressure systolic",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 8347,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 46.0,
+      "max_val": 215.0,
+      "mean_val": 115.27,
+      "median_val": 113.0
+    },
+    {
+      "itemid": 220050,
+      "label": "Arterial Blood Pressure systolic",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 5525,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 25.0,
+      "max_val": 207.0,
+      "mean_val": 113.82,
+      "median_val": 112.0
+    },
+    {
+      "itemid": 220051,
+      "label": "Arterial Blood Pressure diastolic",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 5524,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 21.0,
+      "max_val": 165.0,
+      "mean_val": 59.47,
+      "median_val": 58.0
+    },
+    {
+      "itemid": 224690,
+      "label": "Respiratory Rate (Total)",
+      "category": "Respiratory",
+      "unit_dict": "insp/min",
+      "units_used": [
+        "insp/min"
+      ],
+      "total_observations": 1331,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 0.0,
+      "max_val": 44.0,
+      "mean_val": 20.41,
+      "median_val": 20.0
+    },
+    {
+      "itemid": 224689,
+      "label": "Respiratory Rate (spontaneous)",
+      "category": "Respiratory",
+      "unit_dict": "insp/min",
+      "units_used": [
+        "insp/min"
+      ],
+      "total_observations": 1314,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 0.0,
+      "max_val": 44.0,
+      "mean_val": 9.77,
+      "median_val": 4.0
+    },
+    {
+      "itemid": 220046,
+      "label": "Heart rate Alarm - High",
+      "category": "Alarms",
+      "unit_dict": "bpm",
+      "units_used": [
+        "bpm"
+      ],
+      "total_observations": 1217,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 13.0,
+      "max_val": 170.0,
+      "mean_val": 125.51,
+      "median_val": 130.0
+    },
+    {
+      "itemid": 223770,
+      "label": "O2 Saturation Pulseoxymetry Alarm - Low",
+      "category": "Alarms",
+      "unit_dict": "%",
+      "units_used": [
+        "%"
+      ],
+      "total_observations": 1212,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 8.0,
+      "max_val": 93.0,
+      "mean_val": 91.13,
+      "median_val": 92.0
+    },
+    {
+      "itemid": 220047,
+      "label": "Heart Rate Alarm - Low",
+      "category": "Alarms",
+      "unit_dict": "bpm",
+      "units_used": [
+        "bpm"
+      ],
+      "total_observations": 1208,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 34.0,
+      "max_val": 5050.0,
+      "mean_val": 57.75,
+      "median_val": 50.0
+    },
+    {
+      "itemid": 223769,
+      "label": "O2 Saturation Pulseoxymetry Alarm - High",
+      "category": "Alarms",
+      "unit_dict": "%",
+      "units_used": [
+        "%"
+      ],
+      "total_observations": 1208,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 35.0,
+      "max_val": 160.0,
+      "mean_val": 99.88,
+      "median_val": 100.0
+    },
+    {
+      "itemid": 226253,
+      "label": "SpO2 Desat Limit",
+      "category": "Alarms",
+      "unit_dict": "%",
+      "units_used": [
+        "%"
+      ],
+      "total_observations": 1176,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 65.0,
+      "max_val": 858.0,
+      "mean_val": 87.31,
+      "median_val": 88.0
+    },
+    {
+      "itemid": 224688,
+      "label": "Respiratory Rate (Set)",
+      "category": "Respiratory",
+      "unit_dict": "insp/min",
+      "units_used": [
+        "insp/min"
+      ],
+      "total_observations": 801,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 0.0,
+      "max_val": 35.0,
+      "mean_val": 18.5,
+      "median_val": 16.0
+    },
+    {
+      "itemid": 225309,
+      "label": "ART BP Systolic",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 486,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 71.0,
+      "max_val": 195.0,
+      "mean_val": 109.23,
+      "median_val": 108.0
+    },
+    {
+      "itemid": 225310,
+      "label": "ART BP Diastolic",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 486,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 39.0,
+      "max_val": 124.0,
+      "mean_val": 61.63,
+      "median_val": 62.0
+    },
+    {
+      "itemid": 220059,
+      "label": "Pulmonary Artery Pressure systolic",
+      "category": "Hemodynamics",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 325,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 14.0,
+      "max_val": 273.0,
+      "mean_val": 33.66,
+      "median_val": 31.0
+    },
+    {
+      "itemid": 220060,
+      "label": "Pulmonary Artery Pressure diastolic",
+      "category": "Hemodynamics",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 324,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": -1.0,
+      "max_val": 38.0,
+      "mean_val": 15.67,
+      "median_val": 15.0
+    },
+    {
+      "itemid": 220227,
+      "label": "Arterial O2 Saturation",
+      "category": "Labs",
+      "unit_dict": "%",
+      "units_used": [
+        "%"
+      ],
+      "total_observations": 104,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 43.0,
+      "max_val": 99.0,
+      "mean_val": 95.71,
+      "median_val": 97.0
+    },
+    {
+      "itemid": 228232,
+      "label": "PAR-Oxygen saturation",
+      "category": "Routine Vital Signs",
+      "unit_dict": "nan",
+      "units_used": [],
+      "total_observations": 45,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 0.0,
+      "max_val": 2.0,
+      "mean_val": 1.18,
+      "median_val": 1.0
+    },
+    {
+      "itemid": 227242,
+      "label": "Manual Blood Pressure Diastolic Right",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 5,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 50.0,
+      "max_val": 78.0,
+      "mean_val": 66.4,
+      "median_val": 67.0
+    },
+    {
+      "itemid": 227243,
+      "label": "Manual Blood Pressure Systolic Right",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 5,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 99.0,
+      "max_val": 152.0,
+      "mean_val": 120.6,
+      "median_val": 110.0
+    },
+    {
+      "itemid": 224167,
+      "label": "Manual Blood Pressure Systolic Left",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 3,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 99.0,
+      "max_val": 138.0,
+      "mean_val": 117.0,
+      "median_val": 114.0
+    },
+    {
+      "itemid": 224643,
+      "label": "Manual Blood Pressure Diastolic Left",
+      "category": "Routine Vital Signs",
+      "unit_dict": "mmHg",
+      "units_used": [
+        "mmHg"
+      ],
+      "total_observations": 3,
+      "null_valuenum_count": 0,
+      "null_valuenum_pct": 0.0,
+      "min_val": 64.0,
+      "max_val": 83.0,
+      "mean_val": 71.67,
+      "median_val": 68.0
+    }
+  ],
+  "recommended_item_ids": {
+    "220045": "Heart Rate",
+    "220210": "Respiratory Rate",
+    "220277": "SpO2",
+    "220179": "Non Invasive Blood Pressure systolic",
+    "220180": "Non Invasive Blood Pressure diastolic",
+    "220050": "Arterial Blood Pressure systolic",
+    "220051": "Arterial Blood Pressure diastolic"
+  },
+  "time_gap_and_stay_analysis": {
+    "total_recommended_observations": 69111,
+    "outside_icu_window_count": 213,
+    "duplicate_measurements_count": 0,
+    "overall_delta_t_minutes": {
+      "mean": 37.26,
+      "median": 58.0,
+      "p25": 4.0,
+      "p75": 60.0,
+      "p90": 60.0,
+      "p95": 60.0,
+      "min": 1.0,
+      "max": 2626.0,
+      "std": 34.13
+    },
+    "per_variable_delta_t_minutes": {
+      "Heart Rate": {
+        "count": 13773,
+        "mean_min": 52.53,
+        "median_min": 60.0,
+        "p25_min": 60.0,
+        "p75_min": 60.0,
+        "p90_min": 60.0,
+        "min_min": 1.0,
+        "max_min": 2626.0
+      },
+      "Respiratory Rate": {
+        "count": 13773,
+        "mean_min": 52.7,
+        "median_min": 60.0,
+        "p25_min": 60.0,
+        "p75_min": 60.0,
+        "p90_min": 60.0,
+        "min_min": 1.0,
+        "max_min": 2626.0
+      },
+      "SpO2": {
+        "count": 13400,
+        "mean_min": 53.58,
+        "median_min": 60.0,
+        "p25_min": 60.0,
+        "p75_min": 60.0,
+        "p90_min": 60.0,
+        "min_min": 1.0,
+        "max_min": 831.0
+      },
+      "Non Invasive Blood Pressure systolic": {
+        "count": 8208,
+        "mean_min": 77.08,
+        "median_min": 60.0,
+        "p25_min": 59.0,
+        "p75_min": 60.0,
+        "p90_min": 61.0,
+        "min_min": 1.0,
+        "max_min": 7921.0
+      },
+      "Non Invasive Blood Pressure diastolic": {
+        "count": 8210,
+        "mean_min": 77.06,
+        "median_min": 60.0,
+        "p25_min": 59.0,
+        "p75_min": 60.0,
+        "p90_min": 61.0,
+        "min_min": 1.0,
+        "max_min": 7921.0
+      },
+      "Arterial Blood Pressure systolic": {
+        "count": 5460,
+        "mean_min": 53.3,
+        "median_min": 60.0,
+        "p25_min": 34.0,
+        "p75_min": 60.0,
+        "p90_min": 60.0,
+        "min_min": 1.0,
+        "max_min": 7795.0
+      },
+      "Arterial Blood Pressure diastolic": {
+        "count": 5459,
+        "mean_min": 53.31,
+        "median_min": 60.0,
+        "p25_min": 34.0,
+        "p75_min": 60.0,
+        "p90_min": 60.0,
+        "min_min": 1.0,
+        "max_min": 7795.0
+      }
+    },
+    "stay_sample": [
+      {
+        "stay_id": 30057454,
+        "total_observations": 777,
+        "first_observation": "2171-11-14 10:26:00",
+        "last_observation": "2171-11-18 20:00:00",
+        "duration_hours": 105.57,
+        "var_counts": {
+          "Heart Rate": 151,
+          "Respiratory Rate": 151,
+          "SpO2": 151,
+          "Non Invasive Blood Pressure systolic": 14,
+          "Non Invasive Blood Pressure diastolic": 14,
+          "Arterial Blood Pressure systolic": 148,
+          "Arterial Blood Pressure diastolic": 148
+        }
+      },
+      {
+        "stay_id": 30101877,
+        "total_observations": 386,
+        "first_observation": "2143-03-22 07:12:00",
+        "last_observation": "2143-03-25 12:00:00",
+        "duration_hours": 76.8,
+        "var_counts": {
+          "Heart Rate": 77,
+          "Respiratory Rate": 78,
+          "SpO2": 77,
+          "Non Invasive Blood Pressure systolic": 77,
+          "Non Invasive Blood Pressure diastolic": 77,
+          "Arterial Blood Pressure systolic": 0,
+          "Arterial Blood Pressure diastolic": 0
+        }
+      },
+      {
+        "stay_id": 30425410,
+        "total_observations": 407,
+        "first_observation": "2178-07-22 08:35:00",
+        "last_observation": "2178-07-25 15:01:00",
+        "duration_hours": 78.43,
+        "var_counts": {
+          "Heart Rate": 82,
+          "Respiratory Rate": 82,
+          "SpO2": 83,
+          "Non Invasive Blood Pressure systolic": 80,
+          "Non Invasive Blood Pressure diastolic": 80,
+          "Arterial Blood Pressure systolic": 0,
+          "Arterial Blood Pressure diastolic": 0
+        }
+      },
+      {
+        "stay_id": 30458995,
+        "total_observations": 265,
+        "first_observation": "2137-10-12 22:45:00",
+        "last_observation": "2137-10-14 16:00:00",
+        "duration_hours": 41.25,
+        "var_counts": {
+          "Heart Rate": 43,
+          "Respiratory Rate": 43,
+          "SpO2": 43,
+          "Non Invasive Blood Pressure systolic": 30,
+          "Non Invasive Blood Pressure diastolic": 30,
+          "Arterial Blood Pressure systolic": 38,
+          "Arterial Blood Pressure diastolic": 38
+        }
+      },
+      {
+        "stay_id": 30585761,
+        "total_observations": 173,
+        "first_observation": "2125-06-17 05:08:00",
+        "last_observation": "2125-06-18 14:00:00",
+        "duration_hours": 32.87,
+        "var_counts": {
+          "Heart Rate": 34,
+          "Respiratory Rate": 34,
+          "SpO2": 29,
+          "Non Invasive Blood Pressure systolic": 5,
+          "Non Invasive Blood Pressure diastolic": 5,
+          "Arterial Blood Pressure systolic": 33,
+          "Arterial Blood Pressure diastolic": 33
+        }
+      }
+    ]
+  }
+}

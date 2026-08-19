@@ -1,0 +1,5 @@
+candidate_label,candidate_type,cov_type,scale,plausibility_pct,wasserstein_distance,ks_statistic,correlation_error,synth_diff_std,volatility_ratio,lag1_autocorr,lag5_autocorr,diversity_rmse,diversity_mae,cov_mae
+Phase 11 Continuous Mean,continuous_mean,none,1.0,100.00,8.3190,0.4870,0.3631,0.0169,0.0194,0.9971,0.9611,0.0000,0.0000,1.9405
+Phase 12 Independent Noise (scale=1.0),phase12_independent_noise,independent,1.0,97.18,2.3765,0.1222,0.0895,20.1584,23.0564,-0.0095,-0.0178,20.1547,13.9246,42.6056
+Phase 13 Selected Independent OU (scale=0.25),phase13_independent_ou,independent,0.25,100.00,6.6172,0.3467,0.0921,2.1501,2.4592,0.7080,0.2058,5.1969,3.6033,4.7620
+"Phase 14 Champion Multivariate OU (Shrinkage 0.50, scale=0.35)",multivariate_ou,shrinkage_0.50,0.35,99.97,5.8206,0.2906,0.0874,3.0086,3.4412,0.7025,0.1922,7.1575,4.9782,9.6035

@@ -1,0 +1,33 @@
+{
+  "champion_candidate": "15C_Rational_tau1.0",
+  "validation_metrics": {
+    "plausibility_pct": 99.60693641618496,
+    "wasserstein": 2.104454309081217,
+    "ks_statistic": 0.11118785845797015,
+    "correlation_error": 4.2003476527287615,
+    "real_step_volatility": 9.925312042236328,
+    "step_volatility": 7.686515808105469,
+    "volatility_ratio": 0.7744356827670655,
+    "lag1_ac": 0.6870669722557068,
+    "lag5_ac": 0.1592978686094284,
+    "diversity_rmse": 17.61986635669909,
+    "wasserstein_by_feature": {
+      "heart_rate": 3.0918469321299114,
+      "respiratory_rate": 0.9494769571363346,
+      "spo2": 0.7706119184153175,
+      "systolic_bp": 3.58972503777996,
+      "diastolic_bp": 2.120610699944561
+    },
+    "ks_by_feature": {
+      "heart_rate": 0.10611504647823333,
+      "respiratory_rate": 0.08313559771704482,
+      "spo2": 0.2236964621742875,
+      "systolic_bp": 0.07679234200134699,
+      "diastolic_bp": 0.06619984391893807
+    },
+    "candidate": "15C_Rational_tau1.0",
+    "composite_score": 0.5466406438343897
+  },
+  "phase11_checkpoint": "outputs/checkpoints/phase11_probabilistic.pt",
+  "phase15_scales_config": "experiments/phase15_train_scales.json"
+}

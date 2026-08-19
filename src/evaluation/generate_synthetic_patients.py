@@ -158,19 +158,18 @@ def generate_synthetic_patients(
         print(f"Seed: {patient_seed}")
         print(f"Time points: {profile['num_time_points']}")
         print(f"Duration: {profile['duration']:.2f} hours")
-        print(f"Saved: {os.path.basename(csv_filename)} & {os.path.basename(meta_filename)}")
-        print(f"====================================================")
-
-        # Display rich interactive table in Google Colab / Jupyter if available
+        print(f"\nDataFrame Preview (First 5 Rows):")
+        
         try:
             from IPython.display import display
-            try:
-                from google.colab import data_table
-                display(data_table.DataTable(df_patient, include_index=False, num_rows_per_page=10))
-            except ImportError:
-                display(df_patient.head(10))
+            display(df_patient.head(5))
         except ImportError:
             print(df_patient.head(5).to_string(index=False))
+
+        print(f"\nSaved:")
+        print(f"{os.path.basename(csv_filename)}")
+        print(f"{os.path.basename(meta_filename)}")
+        print(f"====================================================")
 
     print(f"\nSuccessfully generated {len(generated_files)} synthetic patient datasets in '{output_dir}/'.")
     return generated_files

@@ -17,6 +17,7 @@ where:
 """
 
 from typing import List, Optional, Union
+import numpy as np
 import torch
 import torch.nn as nn
 
@@ -44,7 +45,6 @@ class TemporalResidualModel(nn.Module):
         self.output_dim = output_dim
         self.scale = float(scale)
 
-        import numpy as np
         # Parse lambda_val
         if lambda_val is None:
             init_lambda = torch.ones(output_dim, dtype=torch.float32)
@@ -85,7 +85,6 @@ class TemporalResidualModel(nn.Module):
         """
         Updates model feature-wise parameters.
         """
-        import numpy as np
         if isinstance(lambda_val, (int, float)):
             l_tensor = torch.full((self.output_dim,), float(lambda_val), dtype=torch.float32)
         elif isinstance(lambda_val, (list, np.ndarray)):

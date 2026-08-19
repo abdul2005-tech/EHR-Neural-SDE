@@ -1,0 +1,58 @@
+# Python Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints
+
+# IDE & OS Specific
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Environment & Secrets
+.env
+.env.*
+*.secret
+*.pem
+credentials.json
+*.log
+
+# Project-Specific Datasets & Large Archives
+data/raw/
+data/processed/*.pkl
+data/processed/trajectories/
+
+# Checkpoint Weights & Large Output Artifacts
+outputs/checkpoints/*.pt
+outputs/checkpoints/*.pth
+outputs/checkpoints/*.ckpt
+outputs/generated/
+outputs/debug/
+outputs/dg_hmm_baseline/

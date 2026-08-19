@@ -206,9 +206,13 @@ def generate_synthetic_futures(
     base_seed: int = 42,
 ) -> Dict[int, List[np.ndarray]]:
     """Generates synthetic trajectories for a specified model configuration."""
-    synth_by_stay = {}
-    device = next(residual_model.parameters()).device if residual_model is not None and hasattr(residual_model, "parameters") else torch.device("cpu")
+    device = torch.device("cpu")
+    if residual_model is not None:
+        params_or_buffers = list(residual_model.parameters()) + list(residual_model.buffers())
+        if params_or_buffers:
+            device = params_or_buffers[0].device
 
+    synth_by_stay = {}
     for idx, traj in enumerate(trajectories):
         stay_id = traj["stay_id"]
         T_real = traj["T"]
@@ -243,8 +247,13 @@ def generate_synthetic_futures(
                 mu_np, sigma_np = cached_predictions[(stay_id, s_idx)]
                 mu_t = torch.tensor(mu_np, dtype=torch.float32).unsqueeze(0).to(device)
                 sigma_t = torch.tensor(sigma_np, dtype=torch.float32).unsqueeze(0).to(device)
-                X_syn_t, _ = residual_model(mu_t, sigma_t, T_target, generator=gen_s)
-                synth_by_stay[stay_id].append(denormalize(X_syn_t.squeeze(0).cpu().numpy(), mean, std))
+                X_syn_norm, _ = residual_model.apply_residual(
+                    mu_norm=mu_t,
+                    T=T_target,
+                    sigma_decoder=sigma_t,
+                    generator=gen_s,
+                )
+                synth_by_stay[stay_id].append(denormalize(X_syn_norm.squeeze(0).cpu().numpy(), mean, std))
 
     return synth_by_stay
 
@@ -306,14 +315,24 @@ def execute_master_audit():
     )
 
     # Initialize Residual Models
-    res_p13 = MultivariateTemporalResidualModel(cov_type="independent", scale=0.35).to(device)
-    res_p14 = MultivariateTemporalResidualModel(cov_type="full", custom_cov=p14_cov, scale=p14_scale).to(device)
+    res_p13 = MultivariateTemporalResidualModel(
+        output_dim=5,
+        cov_matrix=np.diag(np.diag(p14_cov)),
+        scale=0.35,
+    ).to(device)
+    res_p14 = MultivariateTemporalResidualModel(
+        output_dim=5,
+        cov_matrix=p14_cov,
+        scale=p14_scale,
+    ).to(device)
     res_p15 = StateDependentMultivariateTemporalResidualModel(
+        output_dim=5,
         cov_matrix=p14_cov,
         feature_scales=p15_feature_scales,
-        attenuation_type="rational",
-        tau=1.0,
-        use_decoder_uncertainty=False,
+        global_scale=1.0,
+        attenuation_mode="rational",
+        attenuation_tau=1.0,
+        use_uncertainty_modulation=False,
     ).to(device)
 
     # Compute Real Pearson Correlation Matrix
@@ -636,7 +655,7 @@ All models below are re-evaluated using the exact same canonical pipeline on the
     print("TASK 5: Executing Safety Mechanism Audit")
     print("-------------------------------------------------------")
 
-    atten_func = SmoothBoundaryAttenuation(attenuation_type="rational", tau=1.0)
+    atten_func = SmoothBoundaryAttenuation(mode="rational", tau=1.0)
     
     # Audit synthetic ranges vs bounds
     safety_md = f"""# PHASE 15 AUDIT TASK 5: Safety Mechanism & Attenuation Audit

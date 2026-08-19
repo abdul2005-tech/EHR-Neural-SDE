@@ -267,9 +267,19 @@ def execute_master_audit():
     print(f"Loaded {len(test_trajectories)} TEST stays.")
 
     # Load Phase 11 Checkpoint & Model
-    checkpoint_path = "outputs/checkpoints/phase11_probabilistic.pt"
-    if not os.path.exists(checkpoint_path):
-        raise FileNotFoundError(f"Missing required checkpoint: {checkpoint_path}")
+    checkpoint_candidates = [
+        "outputs/checkpoints/phase11_probabilistic.pt",
+        "/content/drive/MyDrive/EHR-Neural-SDE/outputs/checkpoints/phase11_probabilistic.pt",
+        "/content/EHR-Neural-SDE-GIT/outputs/checkpoints/phase11_probabilistic.pt",
+    ]
+    checkpoint_path = None
+    for p in checkpoint_candidates:
+        if os.path.exists(p):
+            checkpoint_path = p
+            break
+
+    if checkpoint_path is None:
+        raise FileNotFoundError("Missing required checkpoint: outputs/checkpoints/phase11_probabilistic.pt")
 
     ckpt = torch.load(checkpoint_path, map_location=device)
     model = EHRNeuralSDE(

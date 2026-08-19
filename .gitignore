@@ -50,7 +50,7 @@ data/processed/*.pkl
 data/processed/trajectories/
 
 # Checkpoint Weights & Large Output Artifacts
-outputs/checkpoints/*.pt
+!outputs/checkpoints/*.pt
 outputs/checkpoints/*.pth
 outputs/checkpoints/*.ckpt
 outputs/generated/

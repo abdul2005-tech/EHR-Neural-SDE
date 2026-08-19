@@ -300,7 +300,10 @@ def execute_master_audit():
     # Load Phase 15 Scales
     with open("experiments/phase15_train_scales.json", "r") as f:
         p15_scales_data = json.load(f)
-    p15_feature_scales = p15_scales_data["calibrated_feature_scales"]
+    p15_feature_scales = p15_scales_data.get(
+        "calibrated_scales_safe",
+        p15_scales_data.get("calibrated_feature_scales", p15_scales_data.get("calibrated_scales_raw")),
+    )
 
     # Initialize Residual Models
     res_p13 = MultivariateTemporalResidualModel(cov_type="independent", scale=0.35).to(device)

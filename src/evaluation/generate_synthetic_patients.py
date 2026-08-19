@@ -88,13 +88,27 @@ def generate_synthetic_patients(
     tp_gen = TemporalProfileGenerator().fit()
     tp_gen.save_profile("outputs/checkpoints/fitted_temporal_profile.json")
 
+    # Find existing patient indices in output_dir to prevent overwriting
+    existing_indices = []
+    if os.path.exists(output_dir):
+        for fname in os.listdir(output_dir):
+            if fname.startswith("synthetic_patient_") and fname.endswith(".csv"):
+                parts = fname.replace("synthetic_patient_", "").replace(".csv", "")
+                try:
+                    existing_indices.append(int(parts))
+                except ValueError:
+                    pass
+
+    start_idx = max(existing_indices, default=0) + 1
+    end_idx = start_idx + n_patients - 1
+
     generated_files = []
 
     print("\n" + "=" * 65)
-    print(f"       GENERATING {n_patients} SYNTHETIC PATIENT TRAJECTORIES")
+    print(f"       GENERATING {n_patients} SYNTHETIC PATIENT TRAJECTORIES (#{start_idx:03d} to #{end_idx:03d})")
     print("=" * 65)
 
-    for i in range(1, n_patients + 1):
+    for i in range(start_idx, end_idx + 1):
         patient_seed = base_seed + i * 1000 + i * 17
         
         # Sample unique temporal profile & initial condition
@@ -159,16 +173,11 @@ def generate_synthetic_patients(
         print(f"Time points: {profile['num_time_points']}")
         print(f"Duration: {profile['duration']:.2f} hours")
         print(f"\nDataFrame Preview (First 5 Rows):")
-        
-        try:
-            from IPython.display import display
-            display(df_patient.head(5))
-        except ImportError:
-            print(df_patient.head(5).to_string(index=False))
+        print(df_patient.head(5).to_string(index=False))
 
         print(f"\nSaved:")
-        print(f"{os.path.basename(csv_filename)}")
-        print(f"{os.path.basename(meta_filename)}")
+        print(f"{csv_filename}")
+        print(f"{meta_filename}")
         print(f"====================================================")
 
     print(f"\nSuccessfully generated {len(generated_files)} synthetic patient datasets in '{output_dir}/'.")
